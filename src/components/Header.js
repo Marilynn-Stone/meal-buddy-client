@@ -1,4 +1,4 @@
-import "./components/app/App";
+import "./App/App";
 
 export default function Header() {
   return (
