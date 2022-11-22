@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Header from "../Header";
 import Login from "../Login/Login";
+import Menu from "../Menu/Menu";
 
 function App() {
   const [token, setToken] = useState();
