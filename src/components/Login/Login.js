@@ -1,4 +1,10 @@
 import "./Login.scss";
+import "src/hooks/serverAndDBCalls.js"
+import { get } from "request";
+
+function onClick(email, password) {
+  fetch()
+}
 
 export default function Login() {
   return (
@@ -6,15 +12,15 @@ export default function Login() {
       <h1>Please Log In</h1>
       <form>
         <label>
-          <p>Username</p>
-          <input type="text" />
+          <p>Email</p>
+          <input type="text" name="email" value={email}/>
         </label>
         <label>
           <p>Password</p>
-          <input type="password" />
+          <input type="password" name="password" value={password}/>
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button onClick={onClick(email, password)} type="submit">Submit</button>
         </div>
       </form>
     </div>
