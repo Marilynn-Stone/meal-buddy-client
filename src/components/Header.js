@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 import "./App/App";
 
 export default function Header() {
   return (
     <div className="header">
-      <h3>Login</h3>
+      <Link to="login">Login</Link>
       <h3>Logout</h3>
       <h3>Sign up!</h3>
       <h3>Profile</h3>
