@@ -1,7 +1,14 @@
 export default function GroceryList() {
   return(
-    <div>
-      For your shopping pleasure.
-    </div>
+    <>
+    <section className="groc-list">
+        <h1>Grocery List</h1>
+          <>
+          <br />
+          <br />
+          </>
+
+      </section>
+    </>
   );
 }

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useCookies } from "react-cookie";
 // import PropTypes from "prop-types";
 import "./Login.scss";
-import React, { useState } from "react";
 
 import loginCall from "../../hooks/serverAndDBCalls";
 
