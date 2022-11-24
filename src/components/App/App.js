@@ -4,8 +4,8 @@
 import "./App.scss";
 // import Header from "../Header";
 import Login from "../Login/Login";
-import Menu from "../Menu/Menu";
-import GroceryList from "../GroceryList/GroceryList";
+// import Menu from "../Menu/Menu";
+// import GroceryList from "../GroceryList/GroceryList";
 
 
 function App() {
@@ -15,14 +15,15 @@ function App() {
     <Login />
     );
 
-  const App = () => (
-    <div>
-      <Routes>
-        { <Route exact path="/" component={App} /> }
-        { <Route path="/list" component={GroceryList} /> }
-      </Routes>
-    </div>
-  );
+    // const App = () => (
+    //   <Login />
+    // <div>
+    //   <Routes>
+    //     { <Route exact path="/" component={App} /> }
+    //     { <Route path="/list" component={GroceryList} /> }
+    //   </Routes>
+    // </div>
+    // );
 
 
   // return (
