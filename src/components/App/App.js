@@ -3,8 +3,8 @@ import { Route, Routes, Link } from "react-router-dom";
 import "./App.scss";
 import Header from "../Header";
 // import About from "../About";
-// import Home from "../Home";
-import Login from "../Login/Login";
+import Home from "../Home";
+import Login from "../user/Login";
 // import Menu from "../Menu/Menu";
 // import GroceryList from "../GroceryList/GroceryList";
 
@@ -21,8 +21,9 @@ function App() {
     <div>
       <Routes>
         {/* <Route path="/list" component={GroceryList} /> */}
-        <Route path="header" element={<Header />} />
-        <Route path="login" element={<Login />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route exact path="/" component={App} />
       </Routes>
     </div>
@@ -42,7 +43,6 @@ function App() {
           </div>
           <div className="mainpage">
             <App />
-            <h1>Home Page "/"</h1>
           </div>
         </div>
       </div>
