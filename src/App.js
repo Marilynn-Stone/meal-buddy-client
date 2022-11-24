@@ -32,6 +32,8 @@ function App() {
     <>
       <Header />
       <MainPage />
+
+      <Login />
     
     </>
   );
