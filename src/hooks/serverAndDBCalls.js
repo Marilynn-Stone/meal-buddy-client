@@ -1,15 +1,9 @@
-import axios from 'axios';
-// import { remainingSpots } from "helpers/remainingSpots";
+// import axios from 'axios';
 
-export default function serverAndDBCalls() {
+// const loginCall = function(email, password) {
+//   axios.post("http://localhost:3001/login", { email, password })
+//     .then((response)=> {
+//       console.log(response);
+//       }).catch(error => console.log(error))
+// }
 
-  function login(email, password) {
-    return axios.put(`/login`, {email, password})
-      .then((response) => {
-        console.log(response)
-      })
-  }
-
-  return { login }
-
-}
