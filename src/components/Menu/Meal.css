@@ -1,0 +1,21 @@
+.i-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 100px;
+}
+
+article {
+  display: flex;
+  background-color: #f2a65a;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 1rem 3rem;
+  max-width: 18rem;
+  box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+  border-radius: 15px;
+}
+
+.recipe-image {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 8px rgba(77, 77, 77, 0.15);
+}

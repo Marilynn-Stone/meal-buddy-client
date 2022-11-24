@@ -1,5 +1,5 @@
 export default function GroceryList() {
-  render(
+  return(
     <div>
       For your shopping pleasure.
     </div>

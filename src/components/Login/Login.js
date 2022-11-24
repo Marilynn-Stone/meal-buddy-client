@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useCookies } from "react-cookie";
 // import PropTypes from "prop-types";
 import "./Login.scss";
+import React, { useState } from "react";
+
+import loginCall from "../../hooks/serverAndDBCalls";
 
 async function loginUser(credentials) {
   // check to see what is being returned
@@ -29,10 +32,14 @@ async function loginUser(credentials) {
     });
 }
 export default function Login() {
-  const [cookies, setCookie] = useCookies(["user"]);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  // function onClick(email, password) {
+  //   loginCall(email, password);
+  // }
+
+  const [cookies, setCookie] = useCookies(["user"]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,20 +56,30 @@ export default function Login() {
     <div className="login-wrapper">
       <h1>Please Log In</h1>
       {cookies.user && <p>{cookies.user}</p>}
-      <form onSubmit={handleSubmit}>
+      <form autoComplete="off" onSubmit={handleSubmit}>
         <label>
           <p>Email</p>
-          <input type="text" onChange={(e) => setEmail(e.target.value)} />
+          <input
+            type="text"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </label>
         <label>
           <p>Password</p>
           <input
             type="password"
+            name="password"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit">
+            {/* <button onClick={() => onClick(email, password)} type="submit"> */}
+            Submit
+          </button>
         </div>
       </form>
     </div>
