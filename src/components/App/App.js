@@ -1,18 +1,18 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 
 import "./App.scss";
 import Header from "../Header";
 // import About from "../About";
 // import Home from "../Home";
 import Login from "../Login/Login";
-import useToken from "./useToken";
+// import useToken from "./useToken";
 
 function App() {
-  const { token, setToken } = useToken();
+  // const { token, setToken } = useToken();
 
-  if (!token) {
-    return <Login setToken={setToken} />;
-  }
+  // if (!token) {
+  //   return <Login setToken={setToken} />;
+  // }
 
   const App = () => (
     <div>

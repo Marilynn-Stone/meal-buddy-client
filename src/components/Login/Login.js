@@ -1,5 +1,6 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
+import { useCookies } from "react-cookie";
+// import PropTypes from "prop-types";
 import "./Login.scss";
 
 async function loginUser(credentials) {
@@ -27,22 +28,27 @@ async function loginUser(credentials) {
       });
     });
 }
-export default function Login({ setToken }) {
+export default function Login() {
+  const [cookies, setCookie] = useCookies(["user"]);
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await loginUser({
+    const userData = await loginUser({
       email,
       password,
     });
-    setToken(token);
+    setCookie("user", userData, {
+      path: "/",
+    });
   };
 
   return (
     <div className="login-wrapper">
       <h1>Please Log In</h1>
+      {cookies.user && <p>{cookies.user}</p>}
       <form onSubmit={handleSubmit}>
         <label>
           <p>Email</p>
@@ -63,6 +69,6 @@ export default function Login({ setToken }) {
   );
 }
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
-};
+// Login.propTypes = {
+//   setToken: PropTypes.func.isRequired,
+// };
