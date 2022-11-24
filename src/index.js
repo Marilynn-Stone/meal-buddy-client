@@ -1,11 +1,16 @@
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import { CookiesProvider } from "react-cookie";
 import "./index.scss";
 import App from "./components/App/App";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
+  <Router>
+    <CookiesProvider>
+      <App />
+    </CookiesProvider>
+  </Router>
 );
