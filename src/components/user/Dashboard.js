@@ -1,3 +1,15 @@
+import React from 'react';
+
 export default function Dashboard() {
-  return <h2>Dashboard</h2>;
+  return (
+    <>
+      <section className="settings-page">
+        <h1>Settings Dashboard- account and dietary settings</h1>
+          <>
+            <br />
+            <br />
+          </>
+      </section>
+    </>
+  );
 }
