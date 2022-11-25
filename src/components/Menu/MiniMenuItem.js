@@ -27,7 +27,7 @@ export default function MiniMenuItem({ meal }) {
       <h1>{meal.title}</h1>
       <img src={imageUrl} alt="recipe" className="recipe-image"></img>
       <a href={recipe.sourceUrl} target="_blank">
-        <button>RECIPE</button>
+        <button onClick={() => console.log("Button Clicked")}>RECIPE</button>
       </a>
     </article>
   );

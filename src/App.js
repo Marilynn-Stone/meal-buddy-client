@@ -17,7 +17,7 @@ function App() {
   //   return <Login setToken={setToken} />;
   // }
 
-  const App = () => (
+  // const App = () => (
     <div>
       <Routes>
         {/* <Route path="/list" component={GroceryList} /> */}
@@ -32,7 +32,7 @@ function App() {
     <>
       <Header />
       <MainPage />
-
+      <Button />
       <Login />
     
     </>
