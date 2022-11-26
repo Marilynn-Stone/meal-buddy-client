@@ -2,7 +2,7 @@ import { Route, Routes, Link } from "react-router-dom";
 
 import "./App.scss";
 import Header from "../Header";
-// import About from "../About";
+import About from "../About";
 // import Home from "../Home";
 import Login from "../user/Login";
 import MainPage from "../MainPage";
@@ -22,10 +22,9 @@ function App() {
     <div>
       <Routes>
         {/* <Route path="/list" component={GroceryList} /> */}
-        <Route path="/header" element={<Header />} />
-        {/* <Route path="/home" element={<Home />} /> */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/mainPage" element={<MainPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/user/login" element={<Login />} />
+        <Route path="/" element={<MainPage />} />
       </Routes>
     </div>
   );
