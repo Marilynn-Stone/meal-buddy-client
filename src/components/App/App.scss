@@ -7,6 +7,11 @@
 @import "styles/animations.scss";
 
 @import "styles/typography.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
+@import "../../styles/animations.scss";
+
+@import "../../styles/typography.scss";
 // VARIABLES:
 // $dark-teal: #233D4D;
 // $orange: #FE7F2D;
@@ -205,7 +210,9 @@
   align-content: center;
   background-color: $orange;
   color: $yellow;
+      
 }
+  
 
 .photo {
   height: 100px;
@@ -236,63 +243,6 @@
   background-color: $yellow;
   color: $dark-teal;
   padding: 1em;
-}
-
-// ------------------------------------------
-// Modal styles
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-.modal {
-  max-width: 480px;
-  margin: 200px auto;
-  background: #fff;
-  border-radius: 10px;
-}
-// ------------------------------------------
-
-//--------------------------------------------------
-//Sign-up styling
-.sign-up-title {
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-.user-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 5em;
-  margin-right: 5em;
-}
-
-.dietary-options {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 5em;
-  margin-right: 5em;
-}
-
-.signup-label {
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
-
-.restrictions {
-  border-bottom: 2px solid #ccc;
-  border-top: 2px solid #ccc;
-}
-
-.sign-up-button {
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 //--------------------------------------------------
