@@ -2,16 +2,11 @@
 
 @import url("https://use.typekit.net/tlc0nvs.css");
 
-@import "styles/variables.scss";
-@import "styles/reset.scss";
-@import "styles/animations.scss";
-
-@import "styles/typography.scss";
 @import "../../styles/variables.scss";
 @import "../../styles/reset.scss";
 @import "../../styles/animations.scss";
-
 @import "../../styles/typography.scss";
+
 // VARIABLES:
 // $dark-teal: #233D4D;
 // $orange: #FE7F2D;
@@ -210,9 +205,7 @@
   align-content: center;
   background-color: $orange;
   color: $yellow;
-      
 }
-  
 
 .photo {
   height: 100px;
