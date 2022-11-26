@@ -3,28 +3,28 @@ import { Route, Routes, Link } from "react-router-dom";
 import "./App.scss";
 import Header from "../Header";
 import About from "../About";
-// import Home from "../Home";
 import Login from "../user/Login";
 import MainPage from "../MainPage";
-// import Menu from "../Menu/Menu";
-// import GroceryList from "../GroceryList/GroceryList";
-
-// import useToken from "./useToken";
+import Menu from "../Menu/Menu";
+import GroceryList from "../GroceryList/GroceryList";
+import SignUpPage from "../SignUpPage";
+import SignOutPage from "../SignOutPage";
+import UserIndex from "../user/UserIndex";
+import HowTo from "../HowTo";
 
 function App() {
-  // const { token, setToken } = useToken();
-
-  // if (!token) {
-  //   return <Login setToken={setToken} />;
-  // }
-
   const App = () => (
     <div>
       <Routes>
-        {/* <Route path="/list" component={GroceryList} /> */}
-        <Route path="/about" element={<About />} />
-        <Route path="/user/login" element={<Login />} />
         <Route path="/" element={<MainPage />} />
+        <Route path="SignUp" element={<SignUpPage />} />
+        <Route path="Login" element={<Login />} />
+        <Route path="Logout" element={<SignOutPage />} />
+        <Route path="Menu" component={<Menu />} />
+        <Route path="UserProfile" element={<UserIndex />} />
+        <Route path="GroceryList" element={<GroceryList />} />
+        <Route path="AboutUs" element={<About />} />
+        <Route path="HowTo" element={<HowTo />} />
       </Routes>
     </div>
   );
@@ -38,13 +38,13 @@ function App() {
           <div className="sidebar">
             <p className="sidebar-text">links to:</p>
             <li className="sidebar-text">
-              <Link to={"/about"}></Link>About
+              <Link to={"/about"}>About</Link>
             </li>
             <li className="sidebar-text">
-              <Link to={"/howTo"}></Link>How To
+              <Link to={"/howTo"}>How To</Link>
             </li>
             <li className="sidebar-text">
-              <Link to={"/menu"}></Link>Menu
+              <Link to={"/menu"}>Menu</Link>
             </li>
           </div>
           <div className="mainpage">
