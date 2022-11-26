@@ -3,8 +3,9 @@ import { Route, Routes, Link } from "react-router-dom";
 import "./App.scss";
 import Header from "../Header";
 // import About from "../About";
-import Home from "../Home";
+// import Home from "../Home";
 import Login from "../user/Login";
+import MainPage from "../MainPage";
 // import Menu from "../Menu/Menu";
 // import GroceryList from "../GroceryList/GroceryList";
 
@@ -22,9 +23,9 @@ function App() {
       <Routes>
         {/* <Route path="/list" component={GroceryList} /> */}
         <Route path="/header" element={<Header />} />
-        <Route path="/home" element={<Home />} />
+        {/* <Route path="/home" element={<Home />} /> */}
         <Route path="/login" element={<Login />} />
-        <Route exact path="/" component={App} />
+        <Route path="/mainPage" element={<MainPage />} />
       </Routes>
     </div>
   );
@@ -37,9 +38,15 @@ function App() {
         <div className="Home">
           <div className="sidebar">
             <p className="sidebar-text">links to:</p>
-            <li className="sidebar-text">About</li>
-            <li className="sidebar-text">How To</li>
-            <li className="sidebar-text">Menu</li>
+            <li className="sidebar-text">
+              <Link to={"/about"}></Link>About
+            </li>
+            <li className="sidebar-text">
+              <Link to={"/howTo"}></Link>How To
+            </li>
+            <li className="sidebar-text">
+              <Link to={"/menu"}></Link>Menu
+            </li>
           </div>
           <div className="mainpage">
             <App />
