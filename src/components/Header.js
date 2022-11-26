@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import React from "react"; //optional
 
 export default function Header() {
   return (
@@ -7,22 +6,22 @@ export default function Header() {
       <div className="header">
         <h1 className="child bounce">MealBuddy</h1>
         <h3>
-          <Link to={"/login"}></Link>Login
+          <Link to={"/login"}>Login</Link>
         </h3>
         <h3>
-          <Link to={"/logout"}></Link>Logout
+          <Link to={"/logout"}>Logout</Link>
         </h3>
         <h3>
-          <Link to={"/signUpPage"}></Link>Sign up!
+          <Link to={"/signUpPage"}>Sign up!</Link>
         </h3>
         <h3>
-          <Link to={"/dashboard"}></Link>Profile
+          <Link to={"/dashboard"}>Profile</Link>
         </h3>
         <h3>
-          <Link to={"/accountInfo"}></Link>Account Settings
+          <Link to={"/accountInfo"}>Account Settings</Link>
         </h3>
         <h3>
-          <Link to={"/dietarySettings"}></Link>Dietary Settings
+          <Link to={"/dietarySettings"}>Dietary Settings</Link>
         </h3>
       </div>
     </>
