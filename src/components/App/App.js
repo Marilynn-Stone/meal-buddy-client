@@ -23,9 +23,9 @@ function App(session) {
   return (
     <>
       
-      <MainPage />
+      <MainPage checkCookie={checkCookie}/>
       
-      {/* <div className="wrapper">
+       {/* <div className="wrapper">
         <div className="Home">
           <div className="sidebar">
             <p className="sidebar-text">links to:</p>
@@ -38,16 +38,14 @@ function App(session) {
             <li className="sidebar-text">
               <Link to={"/menu"}>Menu</Link>
             </li>
-          </div> 
-          <Modal>
-            <SignUp />
-          </Modal>
-          <div className="mainpage">
-            <MainPage checkCookie={checkCookie} />
-          </div>
-        </div>
-      </div>
-      */}
+          </div>  */}
+          
+           
+          
+          
+        {/* </div>
+      </div> */}
+      
     </>
   );
 }
