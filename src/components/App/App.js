@@ -2,36 +2,24 @@ import { Link } from "react-router-dom";
 
 import "./App.scss";
 import Header from "../Header";
-// import About from "../About";
-// import SignInPage from "../SignInPage";
+import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
-// import Menu from "../Menu/Menu";
-// import GroceryList from "../GroceryList/GroceryList";
-// import SignUpPage from "../SignUpPage";
-// import SignOutPage from "../SignOutPage";
-// import UserIndex from "../user/UserIndex";
-// import HowTo from "../HowTo";
 
-function App() {
-  // const App = () => (
-  //   <div>
-  //     <Routes>
-  //       <Route path="/" element={<MainPage />} />
-  //       <Route path="signUp" element={<SignUpPage />} />
-  //       <Route path="login" element={<SignInPage />} />
-  //       <Route path="logout" element={<SignOutPage />} />
-  //       <Route path="menu/:id" component={<Menu />} />
-  //       <Route path="profile/:id" element={<UserIndex />} />
-  //       <Route path="GroceryList" element={<GroceryList />} />
-  //       <Route path="AboutUs" element={<About />} />
-  //       <Route path="HowTo" element={<HowTo />} />
-  //     </Routes>
-  //   </div>
-  // );
+function App(session) {
+
+  function checkCookie() {
+    const isUserLoggedIn = document.cookie.split('; ').find((row) => row.startsWith('isUserLoggedIn'))?.split('=')[1];
+    if (isUserLoggedIn === "false") {
+      console.log("User not logged in.");
+    } else {
+      console.log("User logged in.");
+      }
+    }
 
   return (
     <>
       <Header />
+      <Sidebar  />
       <div className="wrapper">
         <div className="Home">
           <div className="sidebar">
@@ -47,7 +35,7 @@ function App() {
             </li>
           </div>
           <div className="mainpage">
-            <MainPage />
+            <MainPage  checkCookie={checkCookie}/>
           </div>
         </div>
       </div>
