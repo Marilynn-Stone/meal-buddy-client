@@ -51,34 +51,27 @@
     animation-name: bounce;
     animation-timing-function: ease;
   }
-}
+  a {
+    font-family: sans-serif;
+     &:visited {
+       color: $medium-teal;
+     }
+     &:hover {
+       color: $green;  
+     }
+     &:active {
+       color: $orange;
+     }
+   }
+ } 
+// VARIABLES:
+// $dark-teal: #233D4D;
+// $orange: #FE7F2D;
+// $yellow: #FCCA46;
+// $green: #A1C181;
+// $medium-teal: #619B8A;
 
-.sidebar {
-  display: block;
-  padding: 2em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: $orange;
-  color: $yellow;
 
-  .sidebar-text {
-    background-color: $yellow;
-    color: $dark-teal;
-    font-weight: 900;
-    border-radius: 50%;
-    padding: 1em;
-    transition: background-color 5s ease-out 100ms;
-    transition: color 5s ease-out 102ms;
-    transition: all 0.5s ease-in-out 100ms;
-    &:hover {
-      background-color: $dark-teal;
-      color: $yellow;
-      transform: scale(1.1);
-      border-radius: 40%;
-    }
-  }
   .sign-up-sign-in {
     display: flex;
     flex-direction: row;
@@ -96,11 +89,11 @@
       transition: all 0.5s ease-in-out 100ms;
     }
   }
-}
+
 
 .mainpage {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 400px;
   width: 100%;
   justify-content: center;
@@ -109,8 +102,38 @@
   transition: background-color 2s ease-out 100ms;
   color: $dark-teal;
   padding: 1em;
+  
 }
 
+
+.sidebar {
+  display: block;
+  padding: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: $orange;
+  color: $yellow;
+
+  .sidebar-text {
+    background-color: $yellow;
+    color: $dark-teal;
+    font-weight: 900;
+    border-radius: 50%;
+    padding: 2em;
+    margin: 1em;
+    transition: background-color 5s ease-out 100ms;
+    transition: color 5s ease-out 102ms;
+    transition: all 0.5s ease-in-out 100ms;
+    &:hover {
+      background-color: $dark-teal;
+      color: $yellow;
+      transform: scale(1.1);
+      border-radius: 40%;
+    }
+  }
+}
 .sign-in {
   display: flex;
   flex-direction: column;
