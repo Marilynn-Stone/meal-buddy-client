@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Meal.scss";
+
 
 export default function MiniMenuItem({ meal }) {
   const [imageUrl, setImageUrl] = useState("");

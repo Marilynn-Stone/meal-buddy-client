@@ -10,7 +10,7 @@ export default function MainPage() {
       <Sidebar />
       <div className="mainpage">
         <h1>Welcome to the Meal Buddy Home Page</h1>
-        <p>About Us Blurb...</p>
+        <p>This is the mainpage at /</p>
       </div>
     </div> 
     </>
