@@ -7,11 +7,7 @@ export default function MainPage() {
     <>
     <Header />
     <div className="App">
-      <div className="sidebar">
-        <p className="sidebar-text">Menu</p>
-        <p className="sidebar-text">Grocery List</p>
-        <p className="sidebar-text">Settings</p>
-      </div>
+      <Sidebar />
       <div className="mainpage">
         <h1>Welcome to the Meal Buddy Home Page</h1>
         <p>About Us Blurb...</p>

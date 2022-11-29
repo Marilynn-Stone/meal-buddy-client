@@ -54,7 +54,6 @@ function App(session) {
       <LoggedIn />
       <LogOut />
       <PopUp />
-      <Sidebar />
       <SignUp />
       {/* <DailyMenu /> */}
       {/*<MiniMenuItem /> */}
