@@ -116,6 +116,7 @@
   background-color: $orange;
   color: $yellow;
 
+
   .sidebar-text {
     background-color: $yellow;
     color: $dark-teal;
@@ -132,8 +133,23 @@
       transform: scale(1.1);
       border-radius: 40%;
     }
+    a {
+      font-family: sans-serif;
+       &:visited {
+         color: $dark-teal;
+       }
+       &:hover {
+         color: $yellow;  
+       }
+       &:active {
+         color: $orange;
+       }
+      }
+    
+    
   }
 }
+
 .sign-in {
   display: flex;
   flex-direction: column;

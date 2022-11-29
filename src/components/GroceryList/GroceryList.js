@@ -5,6 +5,7 @@ export default function GroceryList() {
         <h1>Grocery List</h1>
           <>
           <br />
+          This is the grocery list at localhost:3000/list
           <br />
           </>
 
