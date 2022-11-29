@@ -6,10 +6,10 @@ export default function Header() {
       <div className="header">
         <h1 className="child bounce">MealBuddy</h1>
         <h3>
-          <Link to={"signInPage"}>Sign In</Link>
+          <Link to={"login"}>Sign In</Link>
         </h3>
         <h3>
-          <Link to={"signOutPage"}>Sign Out</Link>
+          <Link to={"logout"}>Sign Out</Link>
         </h3>
         <h3>
           <Link to={"signUpPage"}>Sign Up</Link>
