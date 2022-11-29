@@ -1,39 +1,24 @@
 import { useState } from "react";
-// import { useCookies } from "react-cookie";
-// import PropTypes from "prop-types";
-import "./Login.scss";
-
+import "../../styles/login.scss";
 import loginCall from "../../hooks/serverAndDBCalls";
 
-export default function Login() {
+export default function Login(session) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e) {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    loginCall(email, password);
-  }
-
-  // const [cookies, setCookie] = useCookies(["user"]);
-
-  // const handleSubmit = new Promise(function(resolve[,reject])) {
-  //   e.preventDefault();
-  //   const userData = await console.log("userData:", userData);
-  //   loginCall({
-  //     userData,
-  //   });
-  // setCookie("user", userData, {
-  //   path: "/",
-  // });
-  // };
+    loginCall(email, password)
+  };
 
   return (
     <div className="login-wrapper">
-      <h1>Please Log In</h1>
-      {/* {cookies.user && <p>{cookies.user}</p>} */}
+      <h1>Please Sign-in</h1>
       <form autoComplete="off" onSubmit={handleSubmit}>
+        >
         <label>
-          <p>Email</p>
+          Email
           <input
             type="text"
             name="email"
@@ -42,7 +27,7 @@ export default function Login() {
           />
         </label>
         <label>
-          <p>Password</p>
+          Password
           <input
             type="password"
             name="password"
@@ -51,16 +36,9 @@ export default function Login() {
           />
         </label>
         <div>
-          <button type="submit">
-            {/* <button onClick={() => onClick(email, password)} type="submit"> */}
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
   );
 }
-
-// Login.propTypes = {
-//   setToken: PropTypes.func.isRequired,
-// };

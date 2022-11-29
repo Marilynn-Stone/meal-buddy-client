@@ -1,10 +1,16 @@
 import axios from "axios";
 
 export default function loginCall(email, password) {
-  axios
-    .post("http://localhost:8080/users/login", { email, password })
-    .then((response) => {
-      console.log(response);
+  
+  document.cookie = "isUserLoggedIn=true";
+
+    axios.post("http://localhost:8080/users/login", { email, password })
+    .then((res) => {
+      console.log(res);
+      const session = res.data;
+      return { session };
     })
-    .catch((error) => console.log(error));
-}
+    .catch((err) => {
+      console.log(err.res.data);
+    });
+  };
