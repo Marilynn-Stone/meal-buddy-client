@@ -1,6 +1,6 @@
 import DailyMenu from "./DailyMenu";
 import React, { useState } from "react";
-import "./Menu.css";
+import "./Menu.scss";
 
 export default function Menu() {
   const [mealData, setMealData] = useState(null);

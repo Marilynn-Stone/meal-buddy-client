@@ -22,9 +22,10 @@ function App(session) {
 
   return (
     <>
-      <Header />
-      <Sidebar />
-      <div className="wrapper">
+      
+      <MainPage />
+      
+      {/* <div className="wrapper">
         <div className="Home">
           <div className="sidebar">
             <p className="sidebar-text">links to:</p>
@@ -37,7 +38,7 @@ function App(session) {
             <li className="sidebar-text">
               <Link to={"/menu"}>Menu</Link>
             </li>
-          </div>
+          </div> 
           <Modal>
             <SignUp />
           </Modal>
@@ -46,6 +47,7 @@ function App(session) {
           </div>
         </div>
       </div>
+      */}
     </>
   );
 }

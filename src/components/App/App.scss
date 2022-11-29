@@ -51,7 +51,25 @@
     animation-name: bounce;
     animation-timing-function: ease;
   }
-}
+  a {
+    font-family: sans-serif;
+     &:visited {
+       color: $medium-teal;
+     }
+     &:hover {
+       color: $green;  
+     }
+     &:active {
+       color: $orange;
+     }
+   }
+ } 
+// VARIABLES:
+// $dark-teal: #233D4D;
+// $orange: #FE7F2D;
+// $yellow: #FCCA46;
+// $green: #A1C181;
+// $medium-teal: #619B8A;
 
 .sidebar {
   display: block;
@@ -100,7 +118,7 @@
 
 .mainpage {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 400px;
   width: 100%;
   justify-content: center;
