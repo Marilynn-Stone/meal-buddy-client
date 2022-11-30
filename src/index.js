@@ -31,10 +31,10 @@ root.render(
       <Route path="logIn" element={<Login />} />
       <Route path="logOut" element={<LogOut />} />
       <Route path="signUp" element={<SignUp />} />
-      <Route path="menu/:id" component={<Menu />} />
-      <Route path="profile/:id" element={<UserIndex />} />
+      <Route path="menu" component={<Menu />} />
+      <Route path="profile" element={<UserIndex />} />
       <Route path="groceryList" element={<GroceryList />} />
-      <Route path="aboutUs" element={<About />} />
+      <Route path="about" element={<About />} />
       <Route path="welcomeBack" element={<WelcomeBack />} />
       <Route path="accountInfo" element={<AccountInfo />} />
       <Route path="dashboard" element={<Dashboard />} />
@@ -43,6 +43,7 @@ root.render(
       <Route path="miniMenuItem" element={<MiniMenuItem />} />
       <Route path="recipeItem" element={<RecipeItem />} />
       <Route path="dietarySettings" element={<DietarySettings />} />
+      <Route path="howTo" element={<HowTo />} />
     </Routes>
   </Router>
 );

@@ -1,28 +1,15 @@
-import { Link } from "react-router-dom";
+
+// import { Link } from "react-router-dom";
+
 import "./App.scss";
-
-import MainPage from "../MainPage";
-
-
-function App(session) {
+import Header from "../Header";
+import Sidebar from "../Sidebar";
+export default function App() {
 
   return (
     <>
-      <MainPage />
-      {/* <GroceryList />
-      <Menu />
-      <RecipeItem />
-      <FullPageMenuItem />
-      <Dashboard />
-      <Login />
-      <UserIndex />
-      <About />
-      <HowTo />
-      <WelcomeBack />
-      <LogOut />
-      <PopUp />
-      <SignUp /> */}
+      <Header />
+      <Sidebar />
     </>
   );
 }
-export default App;
