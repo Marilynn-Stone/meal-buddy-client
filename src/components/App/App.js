@@ -5,7 +5,7 @@ import Header from "../Header";
 import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
 import Modal from "../Modal";
-import SignUp from "../SignUpPage";
+import SignUp from "../SignUp";
 import GroceryList from "../GroceryList/GroceryList";
 import DailyMenu from "../Menu/DailyMenu";
 import FullPageMenuItem from "../Menu/FullPageMenuItem";
@@ -27,7 +27,7 @@ function App(session) {
 
   return (
     <>
-      <MainPage checkCookie={checkCookie} />
+      {/* <MainPage checkCookie={checkCookie} /> */}
       <GroceryList />
       <Menu />
       <RecipeItem />
