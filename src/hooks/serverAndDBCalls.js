@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default function loginCall(email, password) {
+const loginCall = (email, password) => {
 
     axios.post("http://localhost:8080/users/login", { email, password }, {withCredentials: true})
     .then((res) => {
@@ -11,3 +11,5 @@ export default function loginCall(email, password) {
       console.log("error with login", err.res.data);
     });
   };
+
+  export { loginCall };

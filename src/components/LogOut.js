@@ -1,21 +1,23 @@
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import { useNavigate } from "react-router-dom";
 
 export default function LogOut() {
 
+  const navigate = useNavigate();
+  const goHome = () => {
+    navigate("../")
+  };
+  const logout = () => {
+    localStorage.removeItem("userID");
+    goHome();
+  }
+ 
   return (
 
     <div className="log-out-page">
-      <Header />
-      <div className="App">
-        <Sidebar />
-        <div className="log-out-page-section">
-          <h2>Log-Out Page</h2>
-          <p>are we even using this page or a redirect?</p>
-          
-          <button type="submit">Log Out</button>
-        </div>  
-      </div>
+      <h2>Log-Out Page</h2>
+      <div>
+        <button type="submit" onClick={logout}>Log Out</button>
+      </div>  
 
     </div>
     
