@@ -4,18 +4,16 @@ import "./App.scss";
 //import Header from "../Header";
 //import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
-//import Modal from "../Modal";
-// import SignUp from "../SignUpPage";
 // import Modal from "../Modal";
-// //import SignUp from "../SignUp";
+// import SignUp from "../SignUpPage";
 // import GroceryList from "../GroceryList/GroceryList";
-// //import DailyMenu from "../Menu/DailyMenu";
+// import DailyMenu from "../Menu/DailyMenu";
 // import FullPageMenuItem from "../Menu/FullPageMenuItem";
 // import Menu from "../Menu/Menu";
-// //import MiniMenuItem from "../Menu/MiniMenuItem";
-// //import AccountInfo from "../user/AccountInfo";
+// import MiniMenuItem from "../Menu/MiniMenuItem";
+// import AccountInfo from "../user/AccountInfo";
 // import Dashboard from "../user/Dashboard";
-// //import DietarySettings from "../user/DietarySettings";
+// import DietarySettings from "../user/DietarySettings";
 // import Login from "../user/Login";
 // import UserIndex from "../user/UserIndex";
 // import About from "../About";
@@ -29,25 +27,27 @@ function App(session) {
 
   return (
     <>
-
-      
-      <MainPage />
-      
-      {/* <GroceryList />
-      <Menu />
-      <RecipeItem />
-      {/* <FullPageMenuItem />
-      <Dashboard />
-      <Login />
-      <UserIndex />
-      <About />
-      <HowTo />
-      <WelcomeBack />
-      <LogOut />
-      <PopUp />
-      <SignUp />
-      <SignUp /> */}
-
+      <Header />
+      <Sidebar  />
+      <div className="wrapper">
+        <div className="Home">
+          <div className="sidebar">
+            <p className="sidebar-text">links to:</p>
+            <li className="sidebar-text">
+              <Link to={"/about"}>About</Link>
+            </li>
+            <li className="sidebar-text">
+              <Link to={"/howTo"}>How To</Link>
+            </li>
+            <li className="sidebar-text">
+              <Link to={"/menu"}>Menu</Link>
+            </li>
+          </div>
+          <div className="mainpage">
+            <MainPage />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
