@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <Sidebar  />
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <div className="Home">
           <div className="sidebar">
             <p className="sidebar-text">links to:</p>
@@ -25,11 +25,11 @@ function App() {
               <Link to={"/menu"}>Menu</Link>
             </li>
           </div>
-          <div className="mainpage">
-            {/* <MainPage /> */}
-          </div>
-        </div>
-      </div>
+          {/* <div className="mainpage">
+            <MainPage />
+          </div> */}
+        {/* </div> */}
+      {/* </div> */}
     </>
   );
 }
