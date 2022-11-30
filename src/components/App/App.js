@@ -1,19 +1,19 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./App.scss";
-import Header from "../Header";
-import Sidebar from "../Sidebar";
+//import Header from "../Header";
+//import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
-import Modal from "../Modal";
+//import Modal from "../Modal";
 import SignUp from "../SignUpPage";
 import GroceryList from "../GroceryList/GroceryList";
-import DailyMenu from "../Menu/DailyMenu";
+//import DailyMenu from "../Menu/DailyMenu";
 import FullPageMenuItem from "../Menu/FullPageMenuItem";
 import Menu from "../Menu/Menu";
-import MiniMenuItem from "../Menu/MiniMenuItem";
-import AccountInfo from "../user/AccountInfo";
+//import MiniMenuItem from "../Menu/MiniMenuItem";
+//import AccountInfo from "../user/AccountInfo";
 import Dashboard from "../user/Dashboard";
-import DietarySettings from "../user/DietarySettings";
+//import DietarySettings from "../user/DietarySettings";
 import Login from "../user/Login";
 import UserIndex from "../user/UserIndex";
 import About from "../About";
@@ -44,7 +44,7 @@ function App(session) {
       <GroceryList />
       <Menu />
       <RecipeItem />
-      <FullPageMenuItem />
+      {/* <FullPageMenuItem />
       <Dashboard />
       <Login />
       <UserIndex />
@@ -53,7 +53,7 @@ function App(session) {
       <WelcomeBack />
       <LogOut />
       <PopUp />
-      <SignUp />
+      <SignUp /> */}
 
 
     </>

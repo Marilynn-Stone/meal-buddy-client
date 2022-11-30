@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import MainPage from "./MainPage";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+//import { Link } from "react-router-dom";
+//import MainPage from "./MainPage";
+//import Header from "./Header";
+//import Sidebar from "./Sidebar";
 
 export default function SidebarLoggedIn() {
   return (

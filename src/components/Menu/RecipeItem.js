@@ -1,22 +1,29 @@
-import React from 'react';
+import MealList from './DailyMenu';
+import DailyMenu from './DailyMenu';
+import FullPageMenuItem from './FullPageMenuItem';
+import Menu from './Menu';
+// import { Link } from 'react-router-dom';
+// import { React, useEffect } from 'react';
 
-export default function RecipeItem() {
+
+export default function RecipeItem({ Menu, DailyMenu, MealList, FullPageMenuItem } ) {
+  const menu = Menu;
+  const dailyMenu = DailyMenu;
+  const mealList = MealList;
+  const fullPageMenuItem = FullPageMenuItem;
+
+
   return (
   <>
-    <section className="recipe-item">
-      
-      <h3>This is the recipe component.  </h3>
-      <h1>Meal Name Here</h1>
-      <img src="/" alt="recipe-from-api"></img>
-      <p>Cooking Time: ____ minutes.</p>
-      <p>Servings: __ </p>
-      <p>Ingredients</p>
-      <p>Steps</p>
-      <button href="/">Back to Menu</button>
+    <h1>Recipe Item</h1>
+    <p> this is the recipe item</p>
+    <br />
 
-    </section>
+    {menu}
+    {dailyMenu}
+    {mealList}
+    {fullPageMenuItem}
 
   </>
   );
 }
-

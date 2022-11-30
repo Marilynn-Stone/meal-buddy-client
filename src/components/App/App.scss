@@ -325,7 +325,7 @@
 }
 
 .daily-menu {
-  max-width: fit-content;
+  
   background-color: $green;
   border-radius: 15px;
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
@@ -458,7 +458,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: fit-content;
   background-color: $yellow;
   border: 6px solid $medium-teal;
   padding: 1em;
