@@ -21,6 +21,7 @@ import HowTo from "../HowTo";
 import LoggedIn from "../LoggedIn";
 import LogOut from "../LogOut";
 import PopUp from "../PopUp";
+import RecipeItem from "../Menu/RecipeItem";
 
 
 function App(session) {
@@ -42,6 +43,7 @@ function App(session) {
       <MainPage checkCookie={checkCookie} />
        <GroceryList />
        <Menu />
+       <RecipeItem />
        <FullPageMenuItem />
       <AccountInfo />
       <Dashboard />

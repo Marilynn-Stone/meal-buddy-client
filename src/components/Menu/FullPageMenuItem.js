@@ -1,6 +1,6 @@
 import React from 'react';
 
-const thumbnail = <img className="photo" src="https://iili.io/H2kPjtt.png" alt="thumbnail" />;
+//const= <img className="photo" src="https://iili.io/H2kPjtt.png" alt= />;
 
 export default function FullPageMenuItem() {
 
@@ -23,128 +23,125 @@ export default function FullPageMenuItem() {
         <tr>
         <td className="meal-title">Breakfast</td>
           <td>
-            <p>Bfast1</p>
-            {thumbnail}
+            <a href="/">Bfast1
+            </a>
+            
           </td>
           <td>
-            <p>Bfast2</p>
-            {thumbnail}
+            <a href="/">Bfast2
+            </a>
+            
           </td>
           <td>
-            <p>Bfast3</p>
-            {thumbnail}
+            <a href="/">Bfast3
+            </a>
+            
           </td>
           <td>
-            <p>Bfast4</p>
-            {thumbnail}
+            <a href="/">Bfast4
+            </a>
+            
           </td>
           <td>
-            <p>Bfast5</p>
-            {thumbnail}
+            <a href="/">Bfast5
+            </a>
+            
           </td>
           <td>
-            <p>Bfast6</p>
-            {thumbnail}
+            <a href="/">Bfast6
+            </a>
           </td>
           <td>
-            <p>Bfast7</p>
-            {thumbnail}
+            <a href="/">Bfast7
+            </a>
+            
           </td>
 
         </tr>
-        <tr>
-        <td className="meal-title">Snack</td>
-          <td>
-            <p>Snack1</p>
-            {thumbnail}
-          </td>
-          <td>
-            <p>Snack2</p>
-            {thumbnail}
-          </td>
-          <td>
-            <p>Snack3</p>
-            {thumbnail}
-          </td>
-          <td>
-            <p>Snack4</p>
-            {thumbnail}
-          </td>
-          <td>
-            <p>Snack5</p>
-            {thumbnail}
-          </td>
-          <td>
-            <p>Snack6</p>
-            {thumbnail}
-          </td>
-          <td>
-            <p>Snack7</p>
-            {thumbnail}
-          </td>
 
-        </tr>
         <tr>
           <td className="meal-title">Lunch</td>
           <td>
-            <p>lunch1</p>
-            {thumbnail}
+            <a href="/">lunch1
+            </a>
+            
+            
           </td>
           <td>
-            <p>lunch2</p>
-            {thumbnail}
+            <a href="/">lunch2
+            </a>
+            
           </td>
           <td>
-            <p>lunch3</p>
-            {thumbnail}
+            <a href="/">lunch3</a>
+            
+            
           </td>
           <td>
-            <p>lunch4</p>
-            {thumbnail}
+            <a href="/">lunch4</a>
+            
+            
           </td>
           <td>
-            <p>lunch5</p>
-            {thumbnail}
+            <a href="/">lunch5</a>
+            
+            
           </td>
           <td>
-            <p>lunch6</p>
-            {thumbnail}
+            <a href="/">lunch6</a>
+            
+            
           </td>
           <td>
-            <p>lunch7</p>
-            {thumbnail}
+            <a href="/">lunch7</a>
+            
+            
           </td>
 
         </tr>
         <tr>
-          <td className="meal-title">Supper</td>
+          <td className="meal-title">Dinner</td>
           <td>
-            <p>supper1</p>
-            {thumbnail}
+            <a href="/">dinner1
+            </a>
+            
+            
           </td>          
           <td>
-            <p>supper2</p>
-            {thumbnail}
+            <a href="/">dinner2
+            </a>
+            
+            
           </td>
           <td>
-            <p>supper3</p>
-            {thumbnail}
+            <a href="/">dinner3
+            </a>
+            
+            
           </td>
           <td>
-            <p>supper4</p>
-            {thumbnail}
+            <a href="/">dinner4
+            </a>
+            
+            
           </td>
           <td>
-            <p>supper5</p>
-            {thumbnail}
+            <a href="/">dinner5
+            </a>
+            
+            
           </td>
           <td>
-            <p>supper6</p>
-            {thumbnail}
+            <a href="/">dinner6
+            </a>
+            
+            
           </td>
           <td>
-            <p>supper7</p>
-            {thumbnail}
+            <a href="/">dinner7
+            </a>
+            
+            
           </td>
         </tr>
       </table>
