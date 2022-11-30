@@ -9,6 +9,7 @@ import Login from "./components/user/Login";
 import LogOut from "./components/LogOut";
 import UserIndex from "./components/user/UserIndex";
 import HowTo from "./components/HowTo";
+import SignUp from "./components/SignUp";
 
 
 const container = document.getElementById("root");
@@ -18,13 +19,14 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="login" element={<Login />} />
-      <Route path="logout" element={<LogOut />} />
+      <Route path="logIn" element={<Login />} />
+      <Route path="logOut" element={<LogOut />} />
+      <Route path="signUp" element={<SignUp />} />
       <Route path="menu/:id" component={<Menu />} />
       <Route path="profile/:id" element={<UserIndex />} />
-      <Route path="GroceryList" element={<GroceryList />} />
-      <Route path="AboutUs" element={<About />} />
-      <Route path="HowTo" element={<HowTo />} />
+      <Route path="groceryList" element={<GroceryList />} />
+      <Route path="aboutUs" element={<About />} />
+      <Route path="howTo" element={<HowTo />} />
     </Routes>
   </Router>
 );
