@@ -41,7 +41,7 @@ function App(session) {
     <>
       
       <MainPage checkCookie={checkCookie} />
-      <GroceryList />
+      {/* <GroceryList /> */}
       <Menu />
       <RecipeItem />
       {/* <FullPageMenuItem />
