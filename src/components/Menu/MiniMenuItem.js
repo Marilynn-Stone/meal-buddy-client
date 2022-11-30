@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Meal.css";
+
 
 export default function MiniMenuItem({ meal }) {
   const [imageUrl, setImageUrl] = useState("");
@@ -26,7 +26,8 @@ export default function MiniMenuItem({ meal }) {
     <article>
       <h1>{meal.title}</h1>
       <img src={imageUrl} alt="recipe" className="recipe-image"></img>
-      <a href={recipe.sourceUrl} target="_blank">
+      <a href={recipe.sourceUrl} target="_blank" rel="noreferrer">
+        {/* call API */}
         <button onClick={() => console.log("Button Clicked")}>RECIPE</button>
       </a>
     </article>
