@@ -1,11 +1,19 @@
+import Header from "../Header";
+import Sidebar from "../Sidebar";
+
+
 export default function AccountInfo() {
   return (
     <>
-    <br />
-    <br />
-      <span><h2>AccountInfo</h2></span>
-      <button>Edit</button>
-
+      <Header />
+      <div className="App">
+        <Sidebar />
+        <div className="account-info">
+          <br />
+          <br />
+          <span><h2>AccountInfo</h2></span>
+          <button>Edit</button>
+          
 
           <label className="signup-label">First Name </label>
           <input
@@ -32,6 +40,8 @@ export default function AccountInfo() {
             type="text"
             name="phone_number"
           ></input>
+          </div>
+          </div>
     </>
   );
 };
