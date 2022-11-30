@@ -27,8 +27,8 @@ function App(session) {
 
   return (
     <>
-      {/* <MainPage checkCookie={checkCookie} /> */}
-      <GroceryList />
+      <MainPage />
+      {/* <GroceryList />
       <Menu />
       <RecipeItem />
       <FullPageMenuItem />
@@ -40,7 +40,7 @@ function App(session) {
       <WelcomeBack />
       <LogOut />
       <PopUp />
-      <SignUp />
+      <SignUp /> */}
     </>
   );
 }
