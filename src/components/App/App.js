@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./App.scss";
-import Header from "../Header";
-import Sidebar from "../Sidebar";
+//import Header from "../Header";
+//import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
 // import Modal from "../Modal";
 // import SignUp from "../SignUpPage";
