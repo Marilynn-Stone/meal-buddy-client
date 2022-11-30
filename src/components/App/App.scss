@@ -419,6 +419,20 @@
   }
 }
 
+.controls-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 3rem;
+  max-width: 18rem;
+  padding: 1rem;
+  background-color: $green;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+
+  }
+
 
 // VARIABLES:
 // $dark-teal: #233D4D;

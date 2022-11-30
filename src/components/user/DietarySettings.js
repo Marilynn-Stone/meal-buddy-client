@@ -1,7 +1,17 @@
+
 export default function DietarySettings() {
+  
+  
   return (
     <>
-      <h2 className="dietary-settings">DietarySettings</h2>;
+    <section className="controls-settings">
+      <input
+        type="number"
+        placeholder="Calories (e.g 2000)"
+      />
+      <input type="text" placeholder="diet" />
+      <input type="text" placeholder="exclude" />
+    </section>
 
     </>
   );

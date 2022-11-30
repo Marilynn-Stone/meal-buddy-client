@@ -1,13 +1,35 @@
 export default function AccountInfo() {
   return (
-    <section className="account-info">
-      
+    <>
       <h2>AccountInfo</h2>
       <button>Edit</button>
-      <div>Name: Username</div>
-      <div>Email: email@example.com</div>
-      <div>phone: 555-555-5555</div> 
-      
-    </section>
+
+
+          <label className="signup-label">First Name </label>
+          <input
+            type="text"
+            name="first_name"
+          ></input>
+          <label className="signup-label">Last Name </label>
+          <input
+            type="text"
+            name="last_name"
+          ></input>
+          <label className="signup-label">Email </label>
+          <input
+            type="email"
+            name="email"
+          ></input>
+          <label className="signup-label">Password </label>
+          <input
+            type="password"
+            name="password"
+          ></input>
+          <label className="signup-label">Phone Number </label>
+          <input
+            type="text"
+            name="phone_number"
+          ></input>
+    </>
   );
 };
