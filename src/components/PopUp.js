@@ -4,11 +4,16 @@ export default function PopUp() {
   return (
     <>
       <section className="pop-up-prompt">
-        <h1>Grocery List pop-up prompt upon 'save' to text user custom list</h1>
-          <>
-            <br />
-            <br />
-          </>
+        <div>
+          <h1>Grocery List Saved.</h1>
+          <h2>Would you like to send List as SMS text message?</h2>
+        </div>
+        
+        <span>Phone Number:</span> <input type="text" placeholder="1-(###)-###-####"/>
+        <div>
+        <button>Cancel</button>
+        <button>Send</button>
+        </div>
       </section>
     </>
   );

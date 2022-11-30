@@ -59,36 +59,38 @@ export default function SignUp() {
           className="user-info"
           id="user-info"
         >
-          <label className="signup-label">First Name </label>
+          <label className="signup-label">First Name </label> 
+              
           <input
             type="text"
             name="first_name"
             onChange={(e) => setFirstName(e.target.value)}
-          ></input>
+          ></input><br />
           <label className="signup-label">Last Name </label>
+              
           <input
             type="text"
             name="last_name"
             onChange={(e) => setLastName(e.target.value)}
-          ></input>
+          ></input><br />
           <label className="signup-label">Email </label>
           <input
             type="email"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
-          ></input>
+          ></input><br />
           <label className="signup-label">Password </label>
           <input
             type="password"
             name="password"
             onChange={(e) => setPassword(e.target.value)}
-          ></input>
+          ></input><br />
           <label className="signup-label">Phone Number </label>
           <input
             type="text"
             name="phone_number"
             onChange={(e) => setPhoneNumber(e.target.value)}
-          ></input>
+          ></input><br />
 
           <section className="dietary-options">
             <label className="signup-label">Caloric Target </label>
@@ -115,6 +117,7 @@ export default function SignUp() {
               <option value="low-fodmap">Low FODMAP</option>
               <option value="whole30">Whole30</option>
             </select>
+            <br />
             <label className="signup-label">Dietary Restrictions</label>
             <section className="restrictions">
               <label>Gluten</label>
@@ -124,6 +127,7 @@ export default function SignUp() {
                 checked={gluten}
                 onChange={(e) => setGluten(!gluten)}
               ></input>
+              <br />
               <label>lactose</label>
               <input
                 type="checkbox"
@@ -131,6 +135,8 @@ export default function SignUp() {
                 checked={lactose}
                 onChange={(e) => setLactose(!lactose)}
               ></input>
+
+              <br />
               <label>Peanut</label>
               <input
                 type="checkbox"
@@ -138,6 +144,8 @@ export default function SignUp() {
                 checked={peanut}
                 onChange={(e) => setPeanut(!peanut)}
               ></input>
+
+              <br />
               <label>Fish</label>
               <input
                 type="checkbox"
@@ -145,6 +153,8 @@ export default function SignUp() {
                 checked={fish}
                 onChange={(e) => setFish(!fish)}
               ></input>
+
+              <br />
               <label>Eggs</label>
               <input
                 type="checkbox"
@@ -152,6 +162,8 @@ export default function SignUp() {
                 checked={egg}
                 onChange={(e) => setEgg(!egg)}
               ></input>
+
+              <br />
               <label>Shellfish</label>
               <input
                 type="checkbox"
@@ -159,6 +171,8 @@ export default function SignUp() {
                 checked={shellfish}
                 onChange={(e) => setShellfish(!shellfish)}
               ></input>
+
+              <br />
               <label>Tree Nuts</label>
               <input
                 type="checkbox"
@@ -166,6 +180,8 @@ export default function SignUp() {
                 checked={treeNuts}
                 onChange={(e) => setTreeNuts(!treeNuts)}
               ></input>
+
+              <br />
               <label>Soy</label>
               <input
                 type="checkbox"
@@ -173,6 +189,8 @@ export default function SignUp() {
                 checked={soy}
                 onChange={(e) => setSoy(!soy)}
               ></input>
+                
+              <br />
               <label>Sesame</label>
               <input
                 type="checkbox"
