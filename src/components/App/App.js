@@ -41,13 +41,11 @@ function App(session) {
     <>
       
       <MainPage checkCookie={checkCookie} />
-       <GroceryList />
-       <Menu />
-       <RecipeItem />
-       <FullPageMenuItem />
-      <AccountInfo />
+      <GroceryList />
+      <Menu />
+      <RecipeItem />
+      <FullPageMenuItem />
       <Dashboard />
-      <DietarySettings />
       <Login />
       <UserIndex />
       <About />
@@ -57,8 +55,6 @@ function App(session) {
       <LogOut />
       <PopUp />
       <SignUp />
-      {/* <DailyMenu /> */}
-      {/*<MiniMenuItem /> */}
 
 
     </>

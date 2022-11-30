@@ -1,3 +1,8 @@
 export default function DietarySettings() {
-  return <h2>DietarySettings</h2>;
+  return (
+    <>
+      <h2 className="dietary-settings">DietarySettings</h2>;
+
+    </>
+  );
 }

@@ -374,7 +374,50 @@
   }
 
 
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: $orange;
+  color: $dark-teal;
+  padding: 1em;
+    form{
+      font-weight: 800;
+      font-size: 18px;
+      color: $dark-teal;
+      background-color: $yellow;
+      padding: 1em;
+    }
+    button {
+      background-color: $orange;
+      color: $dark-teal;
+      border-radius: 5px;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+      &:hover {
+        background-color: $medium-teal;
+      }
+    }
+}
 
+.account-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-teal;
+  color: $yellow;
+  padding: 1em;
+  .photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out 100;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
 
 
 // VARIABLES:
