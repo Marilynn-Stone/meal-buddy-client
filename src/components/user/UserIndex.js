@@ -1,3 +1,8 @@
 export default function UserIndex() {
-  return <h2>UserIndex</h2>;
+  return (
+  <div className="user-index">
+  <h1>UserIndex</h1>
+  <h2> What is this component for???  </h2>
+  </div>
+  );
 }

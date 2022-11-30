@@ -18,10 +18,10 @@ import Login from "../user/Login";
 import UserIndex from "../user/UserIndex";
 import About from "../About";
 import HowTo from "../HowTo";
-import LoggedIn from "../LoggedIn";
 import LogOut from "../LogOut";
 import PopUp from "../PopUp";
 import RecipeItem from "../Menu/RecipeItem";
+import WelcomeBack from "../WelcomeBack";
 
 
 function App(session) {
@@ -41,24 +41,19 @@ function App(session) {
     <>
       
       <MainPage checkCookie={checkCookie} />
-       <GroceryList />
-       <Menu />
-       <RecipeItem />
-       <FullPageMenuItem />
-      <AccountInfo />
+      <GroceryList />
+      <Menu />
+      <RecipeItem />
+      <FullPageMenuItem />
       <Dashboard />
-      <DietarySettings />
       <Login />
       <UserIndex />
       <About />
-      <Header />
       <HowTo />
-      <LoggedIn />
+      <WelcomeBack />
       <LogOut />
       <PopUp />
       <SignUp />
-      {/* <DailyMenu /> */}
-      {/*<MiniMenuItem /> */}
 
 
     </>
