@@ -4,13 +4,10 @@ import "./App.scss";
 //import Header from "../Header";
 //import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
-<<<<<<< HEAD
 //import Modal from "../Modal";
 import SignUp from "../SignUpPage";
-=======
 import Modal from "../Modal";
 import SignUp from "../SignUp";
->>>>>>> f57421823ecc172ec91e00ddd3c51a94b36e00c9
 import GroceryList from "../GroceryList/GroceryList";
 //import DailyMenu from "../Menu/DailyMenu";
 import FullPageMenuItem from "../Menu/FullPageMenuItem";
@@ -32,14 +29,13 @@ function App(session) {
 
   return (
     <>
-<<<<<<< HEAD
+
       
       <MainPage checkCookie={checkCookie} />
       {/* <GroceryList /> */}
-=======
+
       <MainPage />
       {/* <GroceryList />
->>>>>>> f57421823ecc172ec91e00ddd3c51a94b36e00c9
       <Menu />
       <RecipeItem />
       {/* <FullPageMenuItem />
@@ -51,12 +47,9 @@ function App(session) {
       <WelcomeBack />
       <LogOut />
       <PopUp />
+      <SignUp />
       <SignUp /> */}
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f57421823ecc172ec91e00ddd3c51a94b36e00c9
     </>
   );
 }
