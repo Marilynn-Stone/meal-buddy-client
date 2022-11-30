@@ -11,6 +11,6 @@ export default function RecipeItem() {
     <br />
     <a href="/menu/">Back to Menu</a>
 
-  </>
+  </> 
   );
 }
