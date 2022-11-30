@@ -1,11 +1,17 @@
+import Header from "../Header";
+import Sidebar from "../Sidebar";
 
 export default function DietarySettings() {
   
   
   return (
     <>
-    <h2>Dietary Settings</h2>
+      <Header />
+      <div className="App">
+        <Sidebar />
+    
     <section className="controls-settings">
+      <h1>Dietary Settings</h1>
       <input
         type="number"
         placeholder="Calories (e.g 2000)"
@@ -13,7 +19,7 @@ export default function DietarySettings() {
       <input type="text" placeholder="diet" />
       <input type="text" placeholder="exclude" />
     </section>
-
+    </div>
     </>
   );
 }
