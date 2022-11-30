@@ -150,14 +150,6 @@
   }
 }
 
-.sign-in {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: $yellow;
-  color: $dark-teal;
-  padding: 1em;
-}
 
 .menu-table {
   table {
@@ -458,6 +450,26 @@
   padding: 2em;
 }
 
+.how-to {
+  background-color: $yellow;
+  padding: 2em;
+}
+
+.log-out-page {
+  background-color: $medium-teal;
+  padding: 2em;
+    button {
+      padding: 0.5em;
+      font-weight: 900;
+      font-size: 20px;
+      background-color: $dark-teal;
+      color: $yellow;
+      &:hover {
+        background-color: $yellow;
+        color: $dark-teal;
+      }
+    }
+}
 // VARIABLES:
 // $dark-teal: #233D4D;
 // $orange: #FE7F2D;

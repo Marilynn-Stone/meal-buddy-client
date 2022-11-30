@@ -10,8 +10,8 @@ export default function LogOut() {
   console.log("cookie test:", cookieValue);
 
   return (
-    <div>
-      <h2>SignOutPage</h2>
+    <div className="log-out-page">
+      <h2>Log-Out Page</h2>
       <div>
         <button type="submit">Log Out</button>
       </div>  
