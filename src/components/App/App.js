@@ -4,8 +4,13 @@ import "./App.scss";
 //import Header from "../Header";
 //import Sidebar from "../Sidebar";
 import MainPage from "../MainPage";
+<<<<<<< HEAD
 //import Modal from "../Modal";
 import SignUp from "../SignUpPage";
+=======
+import Modal from "../Modal";
+import SignUp from "../SignUp";
+>>>>>>> f57421823ecc172ec91e00ddd3c51a94b36e00c9
 import GroceryList from "../GroceryList/GroceryList";
 //import DailyMenu from "../Menu/DailyMenu";
 import FullPageMenuItem from "../Menu/FullPageMenuItem";
@@ -23,25 +28,18 @@ import PopUp from "../PopUp";
 import RecipeItem from "../Menu/RecipeItem";
 import WelcomeBack from "../WelcomeBack";
 
-
 function App(session) {
-  function checkCookie() {
-    const isUserLoggedIn = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("isUserLoggedIn"))
-      ?.split("=")[1];
-    if (isUserLoggedIn === "false") {
-      console.log("User not logged in.");
-    } else {
-      console.log("User logged in.");
-    }
-  }
 
   return (
     <>
+<<<<<<< HEAD
       
       <MainPage checkCookie={checkCookie} />
       {/* <GroceryList /> */}
+=======
+      <MainPage />
+      {/* <GroceryList />
+>>>>>>> f57421823ecc172ec91e00ddd3c51a94b36e00c9
       <Menu />
       <RecipeItem />
       {/* <FullPageMenuItem />
@@ -54,8 +52,11 @@ function App(session) {
       <LogOut />
       <PopUp />
       <SignUp /> */}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f57421823ecc172ec91e00ddd3c51a94b36e00c9
     </>
   );
 }
