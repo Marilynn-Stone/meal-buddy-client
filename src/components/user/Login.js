@@ -1,15 +1,23 @@
 import { useState } from "react";
 import "../../styles/login.scss";
 import loginCall from "../../hooks/serverAndDBCalls";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(session) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+  const goHome = () => {
+    navigate("../")
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     loginCall(email, password)
+    setEmail("");
+    setPassword("");
+    goHome();
   };
 
   return (
