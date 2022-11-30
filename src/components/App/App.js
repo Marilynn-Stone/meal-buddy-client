@@ -49,7 +49,6 @@ function App(session) {
       <Login />
       <UserIndex />
       <About />
-      <Header />
       <HowTo />
       <LoggedIn />
       <LogOut />

@@ -4,6 +4,7 @@ export default function DietarySettings() {
   
   return (
     <>
+    <h2>Dietary Settings</h2>
     <section className="controls-settings">
       <input
         type="number"

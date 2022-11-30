@@ -1,7 +1,9 @@
 export default function AccountInfo() {
   return (
     <>
-      <h2>AccountInfo</h2>
+    <br />
+    <br />
+      <span><h2>AccountInfo</h2></span>
       <button>Edit</button>
 
 
