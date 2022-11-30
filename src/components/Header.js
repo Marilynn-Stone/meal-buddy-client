@@ -12,7 +12,7 @@ export default function Header() {
           <Link to={"logout"}>Sign Out</Link>
         </h3>
         <h3>
-          <Link to={"signUpPage"}>Sign Up</Link>
+          <Link to={"signUp"}>Sign Up</Link>
         </h3>
         <h3>
           <Link to={"dashboard"}>Profile</Link>

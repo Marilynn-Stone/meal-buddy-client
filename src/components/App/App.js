@@ -23,23 +23,10 @@ import PopUp from "../PopUp";
 import RecipeItem from "../Menu/RecipeItem";
 import WelcomeBack from "../WelcomeBack";
 
-
 function App(session) {
-  function checkCookie() {
-    const isUserLoggedIn = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("isUserLoggedIn"))
-      ?.split("=")[1];
-    if (isUserLoggedIn === "false") {
-      console.log("User not logged in.");
-    } else {
-      console.log("User logged in.");
-    }
-  }
 
   return (
     <>
-      
       <MainPage checkCookie={checkCookie} />
       <GroceryList />
       <Menu />
@@ -54,8 +41,6 @@ function App(session) {
       <LogOut />
       <PopUp />
       <SignUp />
-
-
     </>
   );
 }

@@ -1,16 +1,13 @@
 import axios from "axios";
 
 export default function loginCall(email, password) {
-  
-  document.cookie = "isUserLoggedIn=true";
 
-    axios.post("http://localhost:8080/users/login", { email, password })
+    axios.post("http://localhost:8080/users/login", { email, password }, {withCredentials: true})
     .then((res) => {
-      console.log(res);
-      const session = res.data;
-      return { session };
+      console.log("res.data:", res.data);
+      localStorage.setItem("userID", res.data.user);
     })
     .catch((err) => {
-      console.log(err.res.data);
+      console.log("error with login", err.res.data);
     });
   };
