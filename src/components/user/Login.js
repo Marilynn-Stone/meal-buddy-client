@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../styles/login.scss";
-import loginCall from "../../hooks/serverAndDBCalls";
+import loginCall from "../../hooks/useServerAndDBCalls";
 
 export default function Login(session) {
   const [email, setEmail] = useState("");
@@ -16,7 +16,6 @@ export default function Login(session) {
     <div className="login-wrapper">
       <h1>Please Sign-in</h1>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        >
         <label>
           Email
           <input

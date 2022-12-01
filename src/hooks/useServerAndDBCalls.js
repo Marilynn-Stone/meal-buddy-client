@@ -1,9 +1,12 @@
 import axios from "axios";
 
-export default function loginCall(email, password) {
-  
-  document.cookie = "isUserLoggedIn=true";
+export default function useServerAndDBCalls() {
 
+  
+  const loginCall = function(email, password) {
+    
+    document.cookie = "isUserLoggedIn=true";
+    
     axios.post("http://localhost:8080/users/login", { email, password })
     .then((res) => {
       console.log(res);
@@ -14,3 +17,7 @@ export default function loginCall(email, password) {
       console.log(err.res.data);
     });
   };
+
+  return { loginCall }
+
+};
