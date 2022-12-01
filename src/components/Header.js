@@ -25,8 +25,11 @@ export default function Header() {
           <Link to={"/dietarySettings"}>Dietary Settings</Link>
         </h3> */}
       </div>
-      <Sidebar />
-      <Outlet />
+      <section className="mainpage">
+        <div className="mainpage-sidebar"> <Sidebar /> </div>
+        <div className="mainpage-content"> <Outlet /> </div>
+
+      </section>
     </>
   );
 }
