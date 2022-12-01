@@ -6,6 +6,7 @@ export default function Header() {
     <>
       <div className="header">
         <h1 className="child bounce">MealBuddy</h1>
+        
         <h3>
           <Link to={"/login"}>Sign In</Link>
         </h3>
