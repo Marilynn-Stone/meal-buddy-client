@@ -18,11 +18,11 @@ export default function Header() {
           <Link to={"dashboard"}>Profile</Link>
         </h3>
         <h3>
-          <Link to={"accountInfo"}>Account Settings</Link>
+          <Link to={"dashboard"}>Settings</Link>
         </h3>
-        <h3>
+        {/* <h3>
           <Link to={"dietarySettings"}>Dietary Settings</Link>
-        </h3>
+        </h3> */}
       </div>
     </>
   );

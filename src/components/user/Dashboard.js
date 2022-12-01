@@ -10,15 +10,14 @@ export default function Dashboard() {
       <Header />
       <div className="App">
         <Sidebar />
-      <section className="settings-page">
-        <h1>Settings Dashboard- account and dietary settings</h1>
+        <section className="settings-page">
           <>
             <AccountInfo />
             <br />
             <DietarySettings />
             <br />
           </>
-      </section>
+        </section>
       </div>
     </>
   );
