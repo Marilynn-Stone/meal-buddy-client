@@ -1,8 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-
 
 export default function SignUp() {
   //USER PERSONAL INFO STATES---------------------------------
@@ -54,9 +51,7 @@ export default function SignUp() {
 
   return (
     <section className="sign-up">
-      <Header />  
       <div className="App">
-        <Sidebar />
         <div>
           <h1 className="sign-up-title">Sign-up</h1>
           <section className="sign-up-info">

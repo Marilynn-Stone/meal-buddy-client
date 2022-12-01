@@ -1,15 +1,10 @@
-import Header from "../Header";
-import Sidebar from "../Sidebar";
 
 export default function DietarySettings() {
   
   
   return (
     <>
-      <Header />
       <div className="App">
-        <Sidebar />
-    
     <section className="controls-settings">
       <h1>Dietary Settings</h1>
       <input

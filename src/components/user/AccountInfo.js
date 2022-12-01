@@ -1,13 +1,8 @@
-import Header from "../Header";
-import Sidebar from "../Sidebar";
-
 
 export default function AccountInfo() {
   return (
     <>
-      <Header />
       <div className="App">
-        <Sidebar />
         <div className="account-info">
           <br />
           <br />
