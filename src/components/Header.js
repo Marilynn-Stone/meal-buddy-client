@@ -14,9 +14,9 @@ export default function Header() {
         <h3>
           <Link to={"signUp"}>Sign Up</Link>
         </h3>
-        <h3>
+        {/* <h3>
           <Link to={"dashboard"}>Profile</Link>
-        </h3>
+        </h3> */}
         <h3>
           <Link to={"dashboard"}>Settings</Link>
         </h3>
