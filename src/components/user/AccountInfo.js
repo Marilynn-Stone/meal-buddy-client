@@ -2,7 +2,6 @@
 export default function AccountInfo() {
   return (
     <>
-      <div className="App">
         <div className="account-info">
           <br />
           <br />
@@ -36,7 +35,7 @@ export default function AccountInfo() {
             name="phone_number"
           ></input>
           </div>
-          </div>
+          
     </>
   );
 };

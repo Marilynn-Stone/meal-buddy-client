@@ -1,5 +1,12 @@
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+
 export default function SignOutPage() {
   return (
+    <>
+    <Header />
+    <div className="App">
+      <Sidebar />
     <div className="how-to">
       <h2>How-to...</h2>
       <div>
@@ -10,7 +17,8 @@ export default function SignOutPage() {
         LATE!! WE HAVE YOUR EMAIL AND CELL PHONE NUMBER!! mwahahahaha
         mwahahahahahHAHAHAHAHAHA!!!
       </div>
-      
+      </ div>
     </div>
+    </>
   );
 }

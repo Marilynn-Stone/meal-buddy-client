@@ -4,7 +4,6 @@ export default function DietarySettings() {
   
   return (
     <>
-      <div className="App">
     <section className="controls-settings">
       <h1>Dietary Settings</h1>
       <input
@@ -14,7 +13,7 @@ export default function DietarySettings() {
       <input type="text" placeholder="diet" />
       <input type="text" placeholder="exclude" />
     </section>
-    </div>
+    
     </>
   );
 }
