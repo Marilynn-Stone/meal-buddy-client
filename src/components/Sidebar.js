@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 
-
 export default function Sidebar() {
 
   return (
   <div className="sidebar">
-    <li className="sidebar-text">
-      <Link to={"/"}>home</Link>
-    </li>
+
     <li className="sidebar-text">
       <Link to={"/menu"}>Menu</Link>
     </li>
