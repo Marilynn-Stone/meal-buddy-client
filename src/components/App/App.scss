@@ -25,6 +25,7 @@
   
   body {
     font-family: sans-serif;
+    
   }
 }
 
@@ -63,6 +64,12 @@
        color: $orange;
      }
    }
+   #sidebar-with-outlet {
+     display: flex;
+     flex-direction: row;
+
+      
+   }
  } 
 // VARIABLES:
 // $dark-teal: #233D4D;
@@ -73,29 +80,32 @@
 
 .mainpage {
   display: flex;
-  flex-direction: column;
-  height: 400px;
-  width: 100%;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   background-color: $green;
-  transition: background-color 2s ease-out 100ms;
+  transition: background-color 3s ease-out 100ms;
   color: $dark-teal;
-  padding: 1em;
+  
+  .mainpage-sidebar{
+    padding: 0em;
+  }
+  .mainpage-content { 
+  padding: 2em;
+  }
   
 }
 
 .sidebar {
-  display: block;
-  padding: 2em;
+  font-family: confiteria-script, sans-serif;
+  display: flex;
+  padding: 1em;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  align-content: center;
   background-color: $orange;
   color: $yellow;
-
-
+  transition: background-color 2s ease-out 100ms;
   .sidebar-text {
     background-color: $yellow;
     color: $dark-teal;
@@ -113,7 +123,7 @@
       border-radius: 40%;
     }
     a {
-      font-family: sans-serif;
+      
        &:visited {
          color: $dark-teal;
        }
@@ -257,8 +267,7 @@
   align-items: center;
   border: 5px solid $orange;
   border-radius: 1%;
-  width: 800px;
-  height: 200px;
+  width: 100%;
   padding: 10px;
   background-color: $yellow;
   color: $dark-teal;
