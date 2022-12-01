@@ -33,7 +33,7 @@ root.render(
           <Route path="logIn" element={<Login />} />
           <Route path="logOut" element={<LogOut />} />
           <Route path="signUp" element={<SignUp />} />
-          <Route path="menu" component={<Menu />} />
+          <Route path="menu" element={<Menu />} />
           <Route path="profile" element={<UserIndex />} />
           <Route path="groceryList" element={<GroceryList />} />
           <Route path="about" element={<About />} />

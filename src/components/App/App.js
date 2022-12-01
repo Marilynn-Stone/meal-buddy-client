@@ -1,15 +1,15 @@
 import "./App.scss";
 
-import MainPage from "../MainPage";
-import Menu from "../Menu/Menu";
+// import MainPage from "../MainPage";
+// import Menu from "../Menu/Menu";
 
 export default function App() {
-  return (
-    <>
+  // return (
+    // <>
      
-        <MainPage />
-        <Menu />
+    //     <MainPage />
+    //     <Menu />
         
-    </>
-  );
+    // </>
+  // );
 }

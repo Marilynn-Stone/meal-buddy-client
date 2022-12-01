@@ -1,12 +1,7 @@
-import Header from "../Header";
-import Sidebar from "../Sidebar";
-
 export default function GroceryList() {
   return(
     <>
-    <Header />
     <div className="App">
-      <Sidebar />
     <section className="groc-list">
         <h1>Grocery List</h1>
           <>

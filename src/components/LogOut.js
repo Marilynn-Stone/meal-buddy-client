@@ -1,8 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-
 export default function LogOut() {
 
   const navigate = useNavigate();
@@ -16,9 +13,7 @@ export default function LogOut() {
  
   return (
     <>
-      <Header />
       <div className="App">
-        <Sidebar />
       <div className="log-out-page">
         <h2>Log-Out Page</h2>
         <div>
