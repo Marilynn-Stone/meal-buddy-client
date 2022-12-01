@@ -1,10 +1,7 @@
 
-
-
 export default function AccountInfo() {
   return (
     <>
-     
         <div className="account-info">
           <br />
           <br />

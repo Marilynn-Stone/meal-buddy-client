@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
   return (
@@ -6,24 +7,26 @@ export default function Header() {
       <div className="header">
         <h1 className="child bounce">MealBuddy</h1>
         <h3>
-          <Link to={"login"}>Sign In</Link>
+          <Link to={"/login"}>Sign In</Link>
         </h3>
         <h3>
-          <Link to={"logout"}>Sign Out</Link>
+          <Link to={"/logout"}>Sign Out</Link>
         </h3>
         <h3>
-          <Link to={"signUp"}>Sign Up</Link>
+          <Link to={"/signUp"}>Sign Up</Link>
         </h3>
         {/* <h3>
-          <Link to={"dashboard"}>Profile</Link>
+          <Link to={"/dashboard"}>Profile</Link>
         </h3> */}
         <h3>
-          <Link to={"dashboard"}>Settings</Link>
+          <Link to={"/dashboard"}>Settings</Link>
         </h3>
         {/* <h3>
-          <Link to={"dietarySettings"}>Dietary Settings</Link>
+          <Link to={"/dietarySettings"}>Dietary Settings</Link>
         </h3> */}
       </div>
+      <Sidebar />
+      <Outlet />
     </>
   );
 }

@@ -1,12 +1,9 @@
 
-
 export default function DietarySettings() {
   
   
   return (
     <>
-      
-    
     <section className="controls-settings">
       <h1>Dietary Settings</h1>
       <input
