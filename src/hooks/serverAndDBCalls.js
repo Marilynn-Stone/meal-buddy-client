@@ -2,14 +2,14 @@ import axios from "axios";
 
 const loginCall = (email, password) => {
 
-    axios.post("http://localhost:8080/users/login", { email, password }, {withCredentials: true})
+    axios.post("http://localhost:8080/users/login", { email, password, withCredentials: true })
     .then((res) => {
       console.log("res.data:", res.data);
-      localStorage.setItem("userID", res.data.user);
+      localStorage.setItem("userID", res.data);
     })
     .catch((err) => {
       console.log("error with login", err.res.data);
     });
-  };
+};
 
-  export { loginCall };
+export { loginCall };
