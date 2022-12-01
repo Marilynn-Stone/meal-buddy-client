@@ -1,7 +1,8 @@
 
-//const= <img className="photo" src="https://iili.io/H2kPjtt.png" alt= />;
 
 export default function FullPageMenuItem() {
+
+
 
   return (
     <>

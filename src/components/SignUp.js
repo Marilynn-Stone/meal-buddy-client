@@ -109,9 +109,9 @@ export default function SignUp() {
                 <option value="none">None</option>
                 <option value="gluten-free">Gluten Free</option>
                 <option value="ketogenic">Ketogenic</option>
-                <option value="vegetarian">Vegetartian</option>
-                <option value="lacto-vegetarian">Lacto-Vegetartian</option>
-                <option value="ovo-vegetarian">Ovo-Vegetartian</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+                <option value="ovo-vegetarian">Ovo-Vegetarian</option>
                 <option value="vegan">Vegan</option>
                 <option value="pescetarian">Pescetarian</option>
                 <option value="paleo">Paleo</option>
