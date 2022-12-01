@@ -1,4 +1,3 @@
-import React from "react";
 import MiniMenuItem from "./MiniMenuItem";
 export default function MealList({ mealData }) {
   return (

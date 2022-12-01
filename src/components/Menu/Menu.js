@@ -1,6 +1,5 @@
 import DailyMenu from "./DailyMenu";
-import React, { useState } from "react";
-
+import { useState } from "react";
 
 export default function Menu() {
   const [mealData, setMealData] = useState(null);
@@ -8,7 +7,6 @@ export default function Menu() {
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState("");
   
-
   //current set of functions to retrieve user input for restrictions and calories
   //-------------------------------------------------------------------------------------
   function handleCalories(e) {
@@ -59,7 +57,6 @@ export default function Menu() {
         {/* if mealData has info render DailyMenu */}
         <div>{mealData && <DailyMenu mealData={mealData} />}</div>
       </div>
-      
     </div>
   );
 }
