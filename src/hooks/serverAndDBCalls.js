@@ -22,4 +22,15 @@ const weeklyMenuCall = function(user_id) {
   })
 }
 
-export { loginCall, weeklyMenuCall };
+const recipeCall = function(meal_id) {
+  return axios.get(`menu/meal/${meal_id}`)
+  .then((response) => {
+    console.log(response.data);
+    return response.data;
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+}
+
+export { loginCall, weeklyMenuCall, recipeCall };
