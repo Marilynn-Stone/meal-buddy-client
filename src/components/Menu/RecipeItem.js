@@ -43,7 +43,8 @@ export default function RecipeItem(props) {
 
 
   return (
-  <> 
+  <div className="recipe-card"> 
+  <section>
     <h1>{recipe.mealName}</h1>
     <br />
     <h4>Servings: {recipe.servings} </h4>
@@ -51,19 +52,19 @@ export default function RecipeItem(props) {
     <br />
     <img src={recipe.imageURL} alt="recipe" width="300px" />
     <br />
-
-    <h4>Instructions:</h4>
+    <div className="steps">
+    <h4 className="instructions">Instructions:</h4>
     <ol>
       {Object.values(recipe.steps).map((step) => {
-        return <li>{step}</li>;
+        return <li>    ~  {step}.<br /></li>;
       })}
     </ol>
-
+    </div>
     
     <br />
     
     <a href="/menu/">Back to Menu</a>
-
-  </> 
+    </section>
+  </div> 
   );
 }

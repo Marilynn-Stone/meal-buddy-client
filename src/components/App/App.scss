@@ -7,6 +7,7 @@
 @import "../../styles/reset.scss";
 @import "../../styles/animations.scss";
 @import "../../styles/typography.scss";
+@import "../../styles/mixins/mixins.scss";
 
 // VARIABLES:
 // $dark-teal: #233D4D;
@@ -544,6 +545,76 @@
   
  
 }
+
+.recipe-card {
+ 
+  
+  @include scrollbars(30px, #FCCA46, #FE7F2D);
+  
+  overflow-y: scroll;
+
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-teal;;
+  max-width: 100%;
+  color: $yellow;
+  padding: 1em;
+  padding-top: 340px;
+  
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $orange;
+    border-radius: 5px;
+    padding: 0.5rem;
+    
+  }
+  h1{
+    font-size: 24px;
+    font-weight: 900;
+  
+  }
+  h4 {
+    font-size: 18px;
+  
+  }
+  .steps {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    padding: .5em;
+  }
+  a {
+    text-decoration: none;
+    color: $green;
+    font-size: 18px;
+    font-weight: 900;
+    &:hover {
+      color: $yellow;
+    }
+    &:active {
+      color: $orange;
+    }
+  }
+  ol {
+    font-size: 18px;
+    padding: 1.5em;
+
+  }
+  li {
+    padding: 4px;
+  }
+}
+
+
 
 
 
