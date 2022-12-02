@@ -1,15 +1,25 @@
 import axios from "axios";
 
 const loginCall = (email, password) => {
+  axios.post("http://localhost:8080/users/login", { email, password }, {withCredentials: true})
+  .then((res) => {
+    console.log("res.data:", res.data);
+    localStorage.setItem("userID", res.data.user);
+  })
+  .catch((err) => {
+    console.log("error with login", err.res.data);
+  });
+};
 
-    axios.post("http://localhost:8080/users/login", { email, password }, {withCredentials: true})
-    .then((res) => {
-      console.log("res.data:", res.data);
-      localStorage.setItem("userID", res.data.user);
-    })
-    .catch((err) => {
-      console.log("error with login", err.res.data);
-    });
-  };
+const weeklyMenuCall = function(user_id) {
+  return axios.post("http://localhost:8080/menu/weekly_menu", { user_id })
+  .then((response) => {
+    console.log(response.data);
+    return response.data;
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+}
 
-  export { loginCall };
+export { loginCall, weeklyMenuCall };
