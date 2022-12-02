@@ -4,10 +4,8 @@ import Sidebar from "./Sidebar";
 export default function Header() {
   return (
     <>
-    {/* {console.log("hello")} */}
       <div className="header">
-        {JSON.stringify({name: "Paul"})}
-        {false && <h1 className="child bounce">MealBuddy</h1>}
+      <h1 className="child bounce">MealBuddy</h1>
         <h3>
           <Link to={"/login"}>Sign In</Link>
         </h3>
