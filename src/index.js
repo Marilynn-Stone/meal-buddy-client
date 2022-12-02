@@ -14,8 +14,8 @@ import UserIndex from "./components/user/UserIndex";
 import AccountInfo from "./components/user/AccountInfo";
 import Dashboard from "./components/user/Dashboard";
 import DailyMenu from "./components/Menu/DailyMenu";
-import FullPageMenuItem from "./components/Menu/FullPageMenuItem";
-import MiniMenuItem from "./components/Menu/MiniMenuItem";
+import TableMenu from "./components/Menu/TableMenu";
+import TableMenuItem from "./components/Menu/TableMenuItem";
 import RecipeItem from "./components/Menu/RecipeItem";
 import DietarySettings from "./components/user/DietarySettings";
 import GroceryList from "./components/GroceryList/GroceryList";
@@ -41,8 +41,8 @@ root.render(
           <Route path="accountInfo" element={<AccountInfo />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="dailyMenu" element={<DailyMenu />} />
-          <Route path="fullPageMenuItem" element={<FullPageMenuItem />} />
-          <Route path="miniMenuItem" element={<MiniMenuItem />} />
+          <Route path="TableMenu" element={<TableMenu />} />
+          <Route path="TableMenuItem" element={<TableMenuItem />} />
           <Route path="recipeItem" element={<RecipeItem />} />
           <Route path="dietarySettings" element={<DietarySettings />} />
           <Route path="howTo" element={<HowTo />} />

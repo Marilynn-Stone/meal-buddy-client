@@ -10,6 +10,17 @@ const loginCall = (email, password) => {
     .catch((err) => {
       console.log("error with login", err.res.data);
     });
-  };
+};
 
-  export { loginCall };
+const weeklyMenuCall = function(user_id) {
+  axios.post("http://localhost:8080/menu/weekly_menu", { user_id })
+  .then((response) => {
+    console.log("weeklyMenu: ", response);
+    return response;
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+}
+
+export { loginCall, weeklyMenuCall };
