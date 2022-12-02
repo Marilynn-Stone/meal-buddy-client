@@ -4,6 +4,7 @@ export default function Sidebar() {
 
   return (
   <div className="sidebar">
+
     <li className="sidebar-text">
       <Link to={"/menu"}>Menu</Link>
     </li>
@@ -16,6 +17,7 @@ export default function Sidebar() {
     <li className="sidebar-text">
       <Link to={"/howTo"}>How To</Link>
     </li>  
+
   </div>
   );
 
