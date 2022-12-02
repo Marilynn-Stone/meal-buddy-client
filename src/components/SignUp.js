@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   //USER PERSONAL INFO STATES---------------------------------
@@ -49,167 +50,182 @@ export default function SignUp() {
       });
   };
 
+  const navigate = useNavigate();
+  const goLogin = () => {
+    navigate("../login");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signupCall();
+    goLogin();
+  };
+
   return (
     <section className="sign-up">
       <div className="App">
         <div>
           <h1 className="sign-up-title">Sign-up</h1>
           <section className="sign-up-info">
-          <form
-            autoComplete="off"
-            onSubmit={(event) => event.preventDefault()}
-            className="user-info"
-            id="user-info"
-          >
-            <label className="signup-label">First Name </label> 
-                
-            <input
-              type="text"
-              name="first_name"
-              onChange={(e) => setFirstName(e.target.value)}
-            ></input><br />
-            <label className="signup-label">Last Name </label>
-                
-            <input
-              type="text"
-              name="last_name"
-              onChange={(e) => setLastName(e.target.value)}
-            ></input><br />
-            <label className="signup-label">Email </label>
-            <input
-              type="email"
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
-            ></input><br />
-            <label className="signup-label">Password </label>
-            <input
-              type="password"
-              name="password"
-              onChange={(e) => setPassword(e.target.value)}
-            ></input><br />
-            <label className="signup-label">Phone Number </label>
-            <input
-              type="text"
-              name="phone_number"
-              onChange={(e) => setPhoneNumber(e.target.value)}
-            ></input><br />
+            <form
+              autoComplete="off"
+              onSubmit={(event) => event.preventDefault()}
+              className="user-info"
+              id="user-info"
+            >
+              <label className="signup-label">First Name </label>
 
-            <section className="dietary-options">
-              <label className="signup-label">Caloric Target </label>
               <input
-                type="number"
-                name="caloric-target"
-                onChange={(e) => setCaloricTarget(e.target.value)}
+                type="text"
+                name="first_name"
+                onChange={(e) => setFirstName(e.target.value)}
               ></input>
-              <label className="signup-label">Dietary Category</label>
-              <select
-                name="dietary-category"
-                onChange={(e) => setDietCategory(e.target.value)}
-              >
-                <option value="none">None</option>
-                <option value="gluten-free">Gluten Free</option>
-                <option value="ketogenic">Ketogenic</option>
-                <option value="vegetarian">Vegetartian</option>
-                <option value="lacto-vegetarian">Lacto-Vegetartian</option>
-                <option value="ovo-vegetarian">Ovo-Vegetartian</option>
-                <option value="vegan">Vegan</option>
-                <option value="pescetarian">Pescetarian</option>
-                <option value="paleo">Paleo</option>
-                <option value="primal">Primal</option>
-                <option value="low-fodmap">Low FODMAP</option>
-                <option value="whole30">Whole30</option>
-              </select>
               <br />
-              <label className="signup-label">Dietary Restrictions</label>
-              <section className="restrictions">
-                <label>Gluten</label>
-                <input
-                  type="checkbox"
-                  name="gluten"
-                  checked={gluten}
-                  onChange={(e) => setGluten(!gluten)}
-                ></input>
-                <br />
-                <label>lactose</label>
-                <input
-                  type="checkbox"
-                  name="lactose"
-                  checked={lactose}
-                  onChange={(e) => setLactose(!lactose)}
-                ></input>
+              <label className="signup-label">Last Name </label>
 
-                <br />
-                <label>Peanut</label>
-                <input
-                  type="checkbox"
-                  name="peanut"
-                  checked={peanut}
-                  onChange={(e) => setPeanut(!peanut)}
-                ></input>
+              <input
+                type="text"
+                name="last_name"
+                onChange={(e) => setLastName(e.target.value)}
+              ></input>
+              <br />
+              <label className="signup-label">Email </label>
+              <input
+                type="email"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+              ></input>
+              <br />
+              <label className="signup-label">Password </label>
+              <input
+                type="password"
+                name="password"
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+              <br />
+              <label className="signup-label">Phone Number </label>
+              <input
+                type="text"
+                name="phone_number"
+                onChange={(e) => setPhoneNumber(e.target.value)}
+              ></input>
+              <br />
 
-                <br />
-                <label>Fish</label>
+              <section className="dietary-options">
+                <label className="signup-label">Caloric Target </label>
                 <input
-                  type="checkbox"
-                  name="fish"
-                  checked={fish}
-                  onChange={(e) => setFish(!fish)}
+                  type="number"
+                  name="caloric-target"
+                  onChange={(e) => setCaloricTarget(e.target.value)}
                 ></input>
+                <label className="signup-label">Dietary Category</label>
+                <select
+                  name="dietary-category"
+                  onChange={(e) => setDietCategory(e.target.value)}
+                >
+                  <option value="none">None</option>
+                  <option value="gluten-free">Gluten Free</option>
+                  <option value="ketogenic">Ketogenic</option>
+                  <option value="vegetarian">Vegetartian</option>
+                  <option value="lacto-vegetarian">Lacto-Vegetartian</option>
+                  <option value="ovo-vegetarian">Ovo-Vegetartian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="pescetarian">Pescetarian</option>
+                  <option value="paleo">Paleo</option>
+                  <option value="primal">Primal</option>
+                  <option value="low-fodmap">Low FODMAP</option>
+                  <option value="whole30">Whole30</option>
+                </select>
+                <br />
+                <label className="signup-label">Dietary Restrictions</label>
+                <section className="restrictions">
+                  <label>Gluten</label>
+                  <input
+                    type="checkbox"
+                    name="gluten"
+                    checked={gluten}
+                    onChange={(e) => setGluten(!gluten)}
+                  ></input>
+                  <br />
+                  <label>lactose</label>
+                  <input
+                    type="checkbox"
+                    name="lactose"
+                    checked={lactose}
+                    onChange={(e) => setLactose(!lactose)}
+                  ></input>
 
-                <br />
-                <label>Eggs</label>
-                <input
-                  type="checkbox"
-                  name="egg"
-                  checked={egg}
-                  onChange={(e) => setEgg(!egg)}
-                ></input>
+                  <br />
+                  <label>Peanut</label>
+                  <input
+                    type="checkbox"
+                    name="peanut"
+                    checked={peanut}
+                    onChange={(e) => setPeanut(!peanut)}
+                  ></input>
 
-                <br />
-                <label>Shellfish</label>
-                <input
-                  type="checkbox"
-                  name="shellfish"
-                  checked={shellfish}
-                  onChange={(e) => setShellfish(!shellfish)}
-                ></input>
+                  <br />
+                  <label>Fish</label>
+                  <input
+                    type="checkbox"
+                    name="fish"
+                    checked={fish}
+                    onChange={(e) => setFish(!fish)}
+                  ></input>
 
-                <br />
-                <label>Tree Nuts</label>
-                <input
-                  type="checkbox"
-                  name="tree-nuts"
-                  checked={treeNuts}
-                  onChange={(e) => setTreeNuts(!treeNuts)}
-                ></input>
+                  <br />
+                  <label>Eggs</label>
+                  <input
+                    type="checkbox"
+                    name="egg"
+                    checked={egg}
+                    onChange={(e) => setEgg(!egg)}
+                  ></input>
 
-                <br />
-                <label>Soy</label>
-                <input
-                  type="checkbox"
-                  name="soy"
-                  checked={soy}
-                  onChange={(e) => setSoy(!soy)}
-                ></input>
-                  
-                <br />
-                <label>Sesame</label>
-                <input
-                  type="checkbox"
-                  name="sesame"
-                  checked={sesame}
-                  onChange={(e) => setSesame(!sesame)}
-                ></input>
+                  <br />
+                  <label>Shellfish</label>
+                  <input
+                    type="checkbox"
+                    name="shellfish"
+                    checked={shellfish}
+                    onChange={(e) => setShellfish(!shellfish)}
+                  ></input>
+
+                  <br />
+                  <label>Tree Nuts</label>
+                  <input
+                    type="checkbox"
+                    name="tree-nuts"
+                    checked={treeNuts}
+                    onChange={(e) => setTreeNuts(!treeNuts)}
+                  ></input>
+
+                  <br />
+                  <label>Soy</label>
+                  <input
+                    type="checkbox"
+                    name="soy"
+                    checked={soy}
+                    onChange={(e) => setSoy(!soy)}
+                  ></input>
+
+                  <br />
+                  <label>Sesame</label>
+                  <input
+                    type="checkbox"
+                    name="sesame"
+                    checked={sesame}
+                    onChange={(e) => setSesame(!sesame)}
+                  ></input>
+                </section>
+                <label className="signup-label">Other </label>
+                <input type="text" name="restriction"></input>
               </section>
-              <label className="signup-label">Other </label>
-              <input type="text" name="restriction"></input>
-            </section>
-          </form>
-          <button onClick={signupCall}>Submit</button>
-        </section>
+            </form>
+            <button onClick={handleSubmit}>Submit</button>
+          </section>
+        </div>
       </div>
-    </div>
-
     </section>
   );
 }
