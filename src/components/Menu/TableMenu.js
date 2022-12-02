@@ -22,7 +22,6 @@ export default function TableMenu(props) {
       day={item.day}
       meal={item.category}
       name={item.name}
-      onClick={()=> {}}
     />
   ));
   

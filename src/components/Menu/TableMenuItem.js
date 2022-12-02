@@ -5,7 +5,8 @@ export default function TableMenuItem(props) {
     <section className="TableMenuItem">
       <p>{props.day}</p>
       <p>{props.meal}</p>
-      <Link to={`/menu/meal/${props.item_id}`}>{props.name}</Link>
+      <Link to={`/menu/meal/${props.item_id}`} >{props.name}</Link>
+
     </section>
   )
 }

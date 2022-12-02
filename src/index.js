@@ -43,7 +43,7 @@ root.render(
           <Route path="dailyMenu" element={<DailyMenu />} />
           <Route path="TableMenu" element={<TableMenu />} />
           <Route path="TableMenuItem" element={<TableMenuItem />} />
-          <Route path="recipeItem" element={<RecipeItem />} />
+          <Route path="/menu/meal/:id" element={<RecipeItem />} />
           <Route path="dietarySettings" element={<DietarySettings />} />
           <Route path="howTo" element={<HowTo />} />
       </Route>
