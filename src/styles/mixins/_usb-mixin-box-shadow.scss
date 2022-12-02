@@ -1,0 +1,22 @@
+/**
+ * ### Box-shadow
+ * - `Type:` Mixin
+ * - `Description:` Vendorized box-shadow
+ *
+ * Usage:
+ * ```scss
+ * .ninja-in-the-shadow { @include usb-box-shadow(5px, 3px, 10px, #000); }
+ * ```
+ */
+
+@mixin usb-box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}

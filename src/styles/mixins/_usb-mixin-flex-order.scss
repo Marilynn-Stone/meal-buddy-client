@@ -1,0 +1,17 @@
+/**
+ * ### Flex-order
+ * - `Type:` Mixin
+ * - `Description:` Vendorized flex-order
+ *
+ * Usage:
+ * ```scss
+ * .display-second { @include usb-flex-order(-1); }
+ * ```
+ */
+
+@mixin usb-flex-order($position) {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: $position;
+  -ms-flex-order: $position;
+  order: $position;
+}
