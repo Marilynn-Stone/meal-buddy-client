@@ -42,10 +42,11 @@ root.render(
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="dailyMenu" element={<DailyMenu />} />
           <Route path="TableMenu" element={<TableMenu />} />
+          <Route path="RecipeItem" element={<RecipeItem />} />
           <Route path="TableMenuItem" element={<TableMenuItem />} />
-          <Route path="recipeItem" element={<RecipeItem />} />
           <Route path="dietarySettings" element={<DietarySettings />} />
           <Route path="howTo" element={<HowTo />} />
+         
       </Route>
     </Routes>
   </Router>
