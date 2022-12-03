@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import "./App/App.scss";
 import { AiFillHome } from "react-icons/ai";
 
 
@@ -26,21 +27,14 @@ export default function Header() {
           <h3>
             <Link to={"/signUp"} className="top-button">Sign Up</Link>
           </h3>
-          {/* <h3>
-            <Link to={"/dashboard"} className="top-button">Profile</Link>
-          </h3> */}
           <h3>
             <Link to={"/dashboard"} className="top-button">Settings</Link>
           </h3>
-          {/* <h3>
-            <Link to={"/dietarySettings"} className="top-button">Dietary Settings</Link>
-          </h3> */}
         </div>
       </div>
       <section className="mainpage">
         <div className="mainpage-sidebar"> <Sidebar /> </div>
         <div className="mainpage-content"> <Outlet /> </div>
-
       </section>
     </>
   );
