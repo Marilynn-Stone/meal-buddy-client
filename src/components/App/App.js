@@ -10,7 +10,7 @@ export default function App() {
     <>
      
       {/* <ButtonExperiment /> */}
-      <RecipeItem />
+      {/* <RecipeItem /> */}
     </>
   );
   // return (
