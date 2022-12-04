@@ -28,6 +28,7 @@
     font-family: confiteria-script, sans-serif;
     text-decoration: none;
     align-items: flex-start;
+    padding-left: 2em;
     justify-content: space-evenly;
     img{
       width: 70px;
@@ -61,6 +62,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1em;
+    padding-right: 2em;
 
 
     button, a {
@@ -118,8 +120,6 @@
   padding: 1em;
   flex-direction: column;
   height: 100vh;
-  
-  
   align-items: center;
   background-color: $orange;
   color: $yellow;
