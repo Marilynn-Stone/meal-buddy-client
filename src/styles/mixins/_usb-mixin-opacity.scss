@@ -1,0 +1,16 @@
+/**
+ * ### Opacity
+ * - `Type:` Mixin
+ * - `Description:` Vendorized opacity
+ *
+ * Usage:
+ * ```scss
+ * .faded-text { @include usb-opacity(0.8); }
+ * ```
+ */
+
+@mixin usb-opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); // IE8
+}

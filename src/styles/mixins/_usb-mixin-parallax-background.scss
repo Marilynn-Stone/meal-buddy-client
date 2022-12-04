@@ -1,0 +1,19 @@
+/**
+ * ### Parallax background
+ * - `Type:` Mixin
+ * - `Description:` Easy way to create parallax image background
+ *
+ * Usage:
+ * ```scss
+ * .header { @include usb-parallax-background('/assets/images/header2_offset.jpg'); }
+ * ```
+ */
+
+@mixin usb-parallax-background($url) {
+  background-image: url($url);
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}

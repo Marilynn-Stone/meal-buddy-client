@@ -1,0 +1,18 @@
+/**
+ * ### Transition
+ * - `Type:` Mixin
+ * - `Description:` Vendorized transition
+ *
+ * Usage:
+ * ```scss
+ * .animated-div { @include usb-transition(color .3s ease); }
+ * ```
+ */
+
+@mixin usb-transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}

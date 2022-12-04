@@ -1,9 +1,18 @@
-import "./App.scss";
+// import "./App.scss";
 
 // import MainPage from "../MainPage";
 // import Menu from "../Menu/Menu";
-
-export default function App() {
+// import ButtonExperiment from "../ButtonExperiment";
+// import RecipeItem from "../Menu/RecipeItem";
+// 
+// export default function App() {
+  // return (
+    // <>
+     
+      // {/* <ButtonExperiment /> */}
+      // {/* <RecipeItem /> */}
+    // </>
+  // );
   // return (
     // <>
      
@@ -12,4 +21,4 @@ export default function App() {
         
     // </>
   // );
-}
+// }
