@@ -26,6 +26,7 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<Header />} >
+
         <Route path="about" element={<About />} />
         <Route path="howTo" element={<HowTo />} />
         <Route path="logIn" element={<Login />} />
