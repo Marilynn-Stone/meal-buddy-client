@@ -7,7 +7,7 @@ export default function Sidebar() {
   <div className="sidebar">
 
     <li className="sidebar-text">
-      <Link to={"/menu"}>Menu</Link>
+      <Link to={"/TableMenu"}>Menu</Link>
     </li>
     
     <li className="sidebar-text">
