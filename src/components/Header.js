@@ -1,7 +1,7 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import "./App/App.scss";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiFillSetting } from "react-icons/ai";
 
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
       <div className="header">
         <div className="header-left">
         <h1>
-          <Link to={"/"}><AiFillHome /></Link> 
+          <Link to={"/"}><AiFillHome /></Link>
           </h1>
           <h1 className="child bounce">
             MealBuddy
@@ -40,7 +40,7 @@ export default function Header() {
             <Link to={"/signUp"} className="top-button">Sign Up</Link>
           </h3>
           <h3>
-            <Link to={"/dashboard"} className="top-button">Settings</Link>
+            <Link to={"/dashboard"} className="top-button"><AiFillSetting /></Link>
           </h3>
         </div>
       </div>
