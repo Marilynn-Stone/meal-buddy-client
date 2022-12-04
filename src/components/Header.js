@@ -1,10 +1,20 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import "./App/App.scss";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 
 
 export default function Header() {
+
+  const navigate = useNavigate();
+  const goHome = () => {
+    navigate("../")
+  };
+  const logout = () => {
+    localStorage.removeItem("userID");
+    goHome();
+  }
+
   return (
     <>
       <div className="header">
@@ -22,7 +32,9 @@ export default function Header() {
             <Link to={"/login"} className="top-button">Sign In</Link>
           </h3>
           <h3>
-            <Link to={"/logout"} className="top-button">Sign Out</Link>
+            {/* <div className="top-button"> */}
+              <button className="top-button" type="submit" onClick={logout}>Sign Out</button>
+            {/* </div>   */}
           </h3>
           <h3>
             <Link to={"/signUp"} className="top-button">Sign Up</Link>

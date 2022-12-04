@@ -32,10 +32,10 @@
 }
 
 .header {
-  display: flex;
   font-style: normal;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: $dark-teal;
   color: $orange;
   padding: 2em;
