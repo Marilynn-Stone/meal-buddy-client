@@ -32,9 +32,9 @@ export default function Header() {
             <Link to={"/login"} className="top-button">Sign In</Link>
           </h3>
           <h3>
-            <div className="top-button">
-              <button type="submit" onClick={logout}>Sign Out</button>
-            </div>  
+            {/* <div className="top-button"> */}
+              <button className="top-button" type="submit" onClick={logout}>Sign Out</button>
+            {/* </div>   */}
           </h3>
           <h3>
             <Link to={"/signUp"} className="top-button">Sign Up</Link>

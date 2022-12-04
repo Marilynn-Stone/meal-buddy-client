@@ -16,7 +16,6 @@ import TableMenuItem from "./components/Menu/TableMenuItem";
 import RecipeItem from "./components/Menu/RecipeItem";
 import DietarySettings from "./components/user/DietarySettings";
 import GroceryList from "./components/GroceryList/GroceryList";
-import LogOut from "./components/LogOut";
 import Header from "./components/Header";
 import MiniMenuItem from "./components/Menu/MiniMenuItem";
 
@@ -31,7 +30,6 @@ root.render(
         <Route path="howTo" element={<HowTo />} />
         <Route path="logIn" element={<Login />} />
         <Route path="signUp" element={<SignUp />} />
-        <Route path="logOut" element={<LogOut />} />
 
         <Route path="menu" element={<Menu />} />
         <Route path="dailyMenu" element={<DailyMenu />} />
