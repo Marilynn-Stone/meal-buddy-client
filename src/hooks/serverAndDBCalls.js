@@ -22,7 +22,7 @@ const weeklyMenuCall = function(user_id) {
 }
 
 const recipeCall = function(meal_id) {
-  return axios.get(`menu/meal/${meal_id}`)
+  return axios.get(`/menu/meal/${meal_id}`)
   .then((response) => {
     console.log(response.data);
     return response.data;

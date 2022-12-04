@@ -69,7 +69,7 @@ export default function Header() {
       </div>
       <section className="mainpage">
         <div className="mainpage-sidebar"> <Sidebar /> </div>
-        <div className="mainpage-content"> <Outlet /> </div>
+        <div className="mainpage-content"> <Outlet className="out-let"/> </div>
       </section>
     </>
   );

@@ -9,47 +9,37 @@
 @import "../../styles/typography.scss";
 @import "../../styles/mixins/mixins.scss";
 
-// VARIABLES:
-// $dark-teal: #233D4D;
-// $orange: #FE7F2D;
-// $yellow: #FCCA46;
-// $green: #A1C181;
-// $medium-teal: #619B8A;
-
-.App {
-  display: flex;
-  flex-direction: row;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  
-  body {
-    font-family: sans-serif;
-    
-  }
-}
-
 .header {
-  font-style: normal;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: $dark-teal;
+  box-sizing: border-box;
+  width: 100vw;
+  justify-content: space-between;
+  padding: 1em;
+  
   color: $orange;
-  padding: 2em;
+
   // background-image: url(https://iili.io/HCnkGKG.png);
  
     transition: all 0.8s ease-in-out 600ms;
   .header-left{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 4px;
-    align-items: center;
     font-family: confiteria-script, sans-serif;
     text-decoration: none;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    img{
+      width: 70px;
+    }
+    h1 {
+      font-size: 2em;
+      margin: 0;
+      padding: 0;
+      margin-left: 0.5em;
+      color: $orange;
+      text-decoration: none;
+    }
   }
   .child {
     align-self: flex-end;
@@ -60,65 +50,75 @@
       font-size: 50px;
     }
   }
-  .bounce:hover {
+  .bounce {
     animation-name: bounce;
     animation-timing-function: ease;
   }
 
-
-  a {
-    text-decoration: none;
-    font-family: sans-serif;
-    &:visited {
-      color: $medium-teal;
-    }
-    &:hover {
-      color: $green;  
-    }
-    &:active {
-      color: $orange;
-    }
-  }
-
   .header-right{
-    display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    padding: 1em;
+    display: flex;
     align-items: center;
-  
+    justify-content: space-evenly;
+    padding: 1em;
+
+
+    button, a {
+      padding: 0.5em;
+      margin: 0.25em;
+      text-decoration: none;
+      font-family: sans-serif;
+     
+      &:visited {
+        color: $medium-teal;
+      }
+      &:hover {
+        color: $green;  
+      }
+      &:active {
+        color: $orange;
+      }
+      
+      
+    }
+    button {
+      background-color: $dark-teal;
+      border: 2px solid $medium-teal;
+      color: $medium-teal;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: 600;
+      &:hover {
+        background-color: $medium-teal;
+        color: $dark-teal;
+      }
+    }
+
   }
-  #sidebar-with-outlet {
-    display: flex;
-    flex-direction: row;
-  }
-  img{
-    width: 70px;
-  }
+
+
+
+
+
+
 }
 
 .mainpage {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $green;
-  transition: background-color 3s ease-out 100ms;
-  color: $dark-teal;
-    
-  .mainpage-sidebar{
-    padding: 0em;
-  }
-  .mainpage-content { 
-  padding: 2em;
-  }
+  background-color: $medium-teal;
+  height: 90%;
 }
+
+
+
 
 .sidebar {
   font-family: sans-serif;
   display: flex;
   padding: 1em;
   flex-direction: column;
+  height: 100vh;
+  
   
   align-items: center;
   background-color: $orange;
@@ -468,13 +468,7 @@
 }
 
 
-button {
-  padding: 0;
-  font-weight: 900;
-  font-size: 20px;
-  background-color: $medium-teal;
-  color: $dark-teal;
-}
+
 
 
 .sign-up {
@@ -512,16 +506,7 @@ button {
 
 }
 
-.button-experiment {
-  color: $dark-teal;
-  border-radius: 5px;
-  padding: 0.5rem;
-  margin: 0.5rem;
-  padding-right: 20em;
 
-  
- 
-}
 
 .recipe-card {
  

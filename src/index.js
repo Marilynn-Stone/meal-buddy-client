@@ -38,7 +38,7 @@ root.render(
 
         <Route path="groceryList" element={<GroceryList />} />
 
-        <Route path="RecipeItem" element={<RecipeItem />} />
+        <Route path="RecipeItem/:id" element={<RecipeItem />} />
 
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="dietarySettings" element={<DietarySettings />} />
