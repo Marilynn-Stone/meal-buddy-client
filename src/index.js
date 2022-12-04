@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
-// import App from "./components/App/App";
-// import WelcomeBack from "./components/WelcomeBack";
 import About from "./components/About";
 import Menu from "./components/Menu/Menu";
 import HowTo from "./components/HowTo";
