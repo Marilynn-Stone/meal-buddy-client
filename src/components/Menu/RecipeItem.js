@@ -29,7 +29,7 @@ export default function RecipeItem(props) {
 
   const {id} = useParams();
   
-  const [recipe, setRecipe] = useState({steps: {}});
+  const [recipe, setRecipe] = useState({steps: {}, ingredients: {}});
 
 
   useEffect(() => {
@@ -53,6 +53,12 @@ export default function RecipeItem(props) {
     <img src={recipe.imageURL} alt="recipe" width="300px" />
     <br />
     <div className="steps">
+    <h4 className="instructions">Required Ingredients:</h4>
+    <ol>
+      {Object.values(recipe.ingredients).map((ingredient) => {
+        return <li key={ingredient}>    ~  {ingredient}.<br /></li>;
+      })}
+    </ol>
     <h4 className="instructions">Instructions:</h4>
     <ol>
       {Object.values(recipe.steps).map((step) => {

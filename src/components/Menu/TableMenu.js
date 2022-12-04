@@ -17,12 +17,11 @@ export default function TableMenu(props) {
 
   const menuItems = (weeklyMenu).map((item) =>(
     <TableMenuItem 
-      key={item.meals_id}
+      key={item.id}
       item_id={item.spoonacular_id}
       day={item.day}
       meal={item.meal}
       name={item.title}
-      onClick={()=> {}}
     />
   ));
   
