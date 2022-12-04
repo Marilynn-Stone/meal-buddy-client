@@ -19,11 +19,11 @@ export default function Header() {
     <>
       <div className="header">
         <div className="header-left">
-        <h1>
-          <Link to={"/"}><AiFillHome /></Link>
-          </h1>
+      
+          <img src="https://iili.io/HCnmwbt.png" alt="logo"/>
+          
           <h1 className="child bounce">
-            MealBuddy
+            <span>M</span>eal<span>B</span>uddy
           </h1>
 
         </div>
@@ -42,6 +42,10 @@ export default function Header() {
           <h3>
             <Link to={"/dashboard"} className="top-button"><AiFillSetting /></Link>
           </h3>
+          <h1>
+          <Link to={"/"}><AiFillHome /></Link>
+          </h1>
+
         </div>
       </div>
       <section className="mainpage">

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
 
 @import url("https://use.typekit.net/tlc0nvs.css");
-
+// logo https://iili.io/HCnmwbt.png
 
 @import "../../styles/variables.scss";
 @import "../../styles/reset.scss";
@@ -39,6 +39,7 @@
   background-color: $dark-teal;
   color: $orange;
   padding: 2em;
+  // background-image: url(https://iili.io/HCnkGKG.png);
  
     transition: all 0.8s ease-in-out 600ms;
   .header-left{
@@ -55,6 +56,9 @@
     animation-duration: 4s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
+    span {
+      font-size: 50px;
+    }
   }
   .bounce:hover {
     animation-name: bounce;
@@ -83,15 +87,14 @@
     padding: 1em;
     align-items: center;
   
-    .top-button {
-      padding: 2em;
-      font-size: 14;
-    }
 
   }
   #sidebar-with-outlet {
     display: flex;
     flex-direction: row;
+  }
+  img{
+    width: 70px;
   }
 
 
@@ -480,25 +483,15 @@
   padding: 2em;
 }
 
-.log-out-page {
+
+button {
+  padding: 0;
+  font-weight: 900;
+  font-size: 20px;
   background-color: $medium-teal;
-  
-  
-    button {
-      padding: 0.5em;
-      font-weight: 900;
-      font-size: 20px;
-      background-color: $dark-teal;
-      color: $yellow;
-      &:hover {
-        background-color: $yellow;
-        color: $dark-teal;
-      }
-    }
+  color: $dark-teal;
 }
-.log-out-page-section {
-  padding: 1em;
-}
+
 
 .sign-up {
   display: flex;
