@@ -31,6 +31,7 @@ export default function RecipeItem(props) {
   
   const [recipe, setRecipe] = useState({steps: {}});
 
+
   useEffect(() => {
     const fetchData = async() => {
       const data = await recipeCall(Number(id));
@@ -62,7 +63,6 @@ export default function RecipeItem(props) {
     
     <br />
     
-
     <a href="/menu/">Back to Menu</a>
     </section>
   </div> 
