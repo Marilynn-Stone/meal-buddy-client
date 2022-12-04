@@ -10,7 +10,7 @@ export default function Header() {
       <div className="header">
         <div className="header-left">
         <h1>
-          <Link to={"/"}><AiFillHome /></Link> 
+          <Link to={"/"}><AiFillHome /></Link>
           </h1>
           <h1 className="child bounce">
             MealBuddy
