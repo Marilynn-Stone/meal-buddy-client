@@ -18,6 +18,7 @@ import DietarySettings from "./components/user/DietarySettings";
 import GroceryList from "./components/GroceryList/GroceryList";
 import Header from "./components/Header";
 import MiniMenuItem from "./components/Menu/MiniMenuItem";
+import LargeLogo from "./components/LargeLogo";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -45,6 +46,9 @@ root.render(
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="dietarySettings" element={<DietarySettings />} />
         <Route path="accountInfo" element={<AccountInfo />} />
+
+        <Route path="largeLogo" element={<LargeLogo />} />
+
          
       </Route>
     </Routes>

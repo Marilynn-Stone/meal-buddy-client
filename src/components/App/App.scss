@@ -96,17 +96,25 @@
 
   }
 
-
-
-
-
-
 }
+
 
 .mainpage {
   display: flex;
   background-color: $medium-teal;
   height: 90%;
+  justify-content: flex-start;
+  
+  
+ img {
+    padding-left: 60px;
+    width: 400px;
+    height: 400px;
+    padding: 4em;
+    justify-self: center;
+    
+ }
+
 }
 
 

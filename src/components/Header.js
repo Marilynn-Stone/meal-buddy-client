@@ -2,6 +2,8 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import "./App/App.scss";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
+import LargeLogo from "./LargeLogo";
+
 
 
 export default function Header() {
@@ -51,6 +53,8 @@ export default function Header() {
       <section className="mainpage">
         <div className="mainpage-sidebar"> <Sidebar /> </div>
         <div className="mainpage-content"> <Outlet className="out-let"/> </div>
+        <LargeLogo className="large-logo"/>
+        
       </section>
     </>
   );
