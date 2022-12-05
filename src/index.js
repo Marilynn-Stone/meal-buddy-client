@@ -30,11 +30,11 @@ const root = createRoot(container);
     return (
       <Router>
         <Routes>
-          <Route path="/" element={<Header userID={ userID} setUserID={setUserID}/>} >
+          <Route path="/" element={<Header userID={userID} setUserID={setUserID}/>} >
             <Route path="about" element={<About />} />
             <Route path="howTo" element={<HowTo />} />
             <Route path="logIn" element={<Login setUserID={setUserID}/>} />
-            <Route path="signUp" element={<SignUp />} />
+            <Route path="signUp" element={<SignUp setUserID={setUserID}/>} />
 
             <Route path="menu" element={<Menu />} />
             <Route path="dailyMenu" element={<DailyMenu />} />

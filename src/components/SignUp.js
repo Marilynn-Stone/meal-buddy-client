@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function SignUp() {
+export default function SignUp({setUserID}) {
   //USER PERSONAL INFO STATES---------------------------------
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -25,7 +25,7 @@ export default function SignUp() {
   const [sesame, setSesame] = useState(false);
 
   // WILL BE MOVED TO HOOKS SERVER AND DB CALLS
-  const signupCall = () => {
+  const signupCall = (setUserID) => {
     return axios
       .post(
         "/users/signup",
@@ -50,20 +50,20 @@ export default function SignUp() {
         { withCredentials: true }
       )
       .then((response) => {
-        localStorage.setItem("userID", response.data.user);
-        console.log("HEELO", response.data);
+        setUserID(response.data.user);
+        console.log("HELLO", response.data);
       });
   };
 
   const navigate = useNavigate();
-  const goLogin = () => {
-    navigate("../login");
+  const goHome = () => {
+    navigate("../")
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signupCall();
-    // goLogin();
+    signupCall(setUserID);
+    goHome();;
   };
 
   return (
@@ -74,7 +74,7 @@ export default function SignUp() {
           <section className="sign-up-info">
             <form
               autoComplete="off"
-              onSubmit={(event) => event.preventDefault()}
+              onSubmit={handleSubmit}
               className="user-info"
               id="user-info"
             >
@@ -226,8 +226,9 @@ export default function SignUp() {
                 <label className="signup-label">Other </label>
                 <input type="text" name="restriction"></input>
               </section>
+
+            <button type="submit">Submit</button>
             </form>
-            <button onClick={handleSubmit}>Submit</button>
           </section>
         </div>
       </div>
