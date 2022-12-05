@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { createRoot } from "react-dom/client";
+import { useState, useEffect } from "react";
 import "./index.scss";
-// import App from "./components/App/App";
-// import WelcomeBack from "./components/WelcomeBack";
 import About from "./components/About";
 import Menu from "./components/Menu/Menu";
 import HowTo from "./components/HowTo";
@@ -23,34 +22,42 @@ import LargeLogo from "./components/LargeLogo";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
-root.render(
-  <Router>
-    <Routes>
-      <Route path="/" element={<Header />} >
-        <Route path="about" element={<About />} />
-        <Route path="howTo" element={<HowTo />} />
-        <Route path="logIn" element={<Login />} />
-        <Route path="signUp" element={<SignUp />} />
+  const App = () => {
+    const [userID, setUserID] = useState(localStorage.getItem("userID"));
+    useEffect(() => {
+      localStorage.setItem("userID", userID)
+    }, [userID])
 
-        <Route path="menu" element={<Menu />} />
-        <Route path="dailyMenu" element={<DailyMenu />} />
-        <Route path="miniMenuItem" element={<MiniMenuItem />} />
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Header userID={ userID} setUserID={setUserID}/>} >
+            <Route path="about" element={<About />} />
+            <Route path="howTo" element={<HowTo />} />
+            <Route path="logIn" element={<Login setUserID={setUserID}/>} />
+            <Route path="signUp" element={<SignUp />} />
 
-        <Route path="TableMenu" element={<TableMenu />} />
-        <Route path="TableMenuItem" element={<TableMenuItem />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="dailyMenu" element={<DailyMenu />} />
+            <Route path="miniMenuItem" element={<MiniMenuItem />} />
 
-        <Route path="groceryList" element={<GroceryList />} />
+            <Route path="TableMenu" element={<TableMenu />} />
+            <Route path="TableMenuItem" element={<TableMenuItem />} />
 
-        <Route path="RecipeItem/:id" element={<RecipeItem />} />
+            <Route path="groceryList" element={<GroceryList />} />
 
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="dietarySettings" element={<DietarySettings />} />
-        <Route path="accountInfo" element={<AccountInfo />} />
+            <Route path="RecipeItem/:id" element={<RecipeItem />} />
 
-        <Route path="largeLogo" element={<LargeLogo />} />
-
-         
-      </Route>
-    </Routes>
-  </Router>
-);
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="dietarySettings" element={<DietarySettings />} />
+            <Route path="accountInfo" element={<AccountInfo />} />
+            
+            <Route path="largeLogo" element={<LargeLogo />} />
+            
+          </Route>
+        </Routes>
+      </Router>
+    );
+  }
+  
+root.render(<App />)
