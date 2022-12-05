@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import "./App/App.scss";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 import LargeLogo from "./LargeLogo";
+import Overlay from "./Overlay";
 
 
 
@@ -54,6 +55,7 @@ export default function Header() {
         <div className="mainpage-sidebar"> <Sidebar /> </div>
         <div className="mainpage-content"> <Outlet className="out-let"/> </div>
         <LargeLogo className="large-logo"/>
+        <Overlay className="overlay"/>
         
       </section>
     </>

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
 
 @import url("https://use.typekit.net/tlc0nvs.css");
+
 // logo https://iili.io/HCnmwbt.png
 
 @import "../../styles/variables.scss";
@@ -8,6 +9,7 @@
 @import "../../styles/animations.scss";
 @import "../../styles/typography.scss";
 @import "../../styles/mixins/mixins.scss";
+@import "../../styles/animations/_usb-animation-float.scss";
 
 .header {
   display: flex;
@@ -30,6 +32,7 @@
     align-items: flex-start;
     justify-content: space-evenly;
     img{
+      @extend %usb-animation-float;
       width: 70px;
     }
     h1 {
@@ -51,8 +54,7 @@
     }
   }
   .bounce {
-    animation-name: bounce;
-    animation-timing-function: ease;
+    @extend %usb-animation-float;
   }
 
   .header-right{
@@ -101,22 +103,27 @@
 
 .mainpage {
   display: flex;
-  background-color: $medium-teal;
-  height: 90%;
-  justify-content: flex-start;
+  background-color: $green;
+  
+  height: 100vh;
+ .mainpage-content {
+  display: flex;
+  justify-self: center;
+  padding-left: 20em;
+ }
   
   
  img {
-    padding-left: 60px;
+  
+    padding-left: 80px;
     width: 400px;
     height: 400px;
-    padding: 4em;
-    justify-self: center;
-    
+    padding: 1em;
+    margin-left: 6em;
  }
 
-}
 
+}
 
 
 

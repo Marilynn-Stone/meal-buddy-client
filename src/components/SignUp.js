@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import LargeLogo from "./LargeLogo";
 
 export default function SignUp() {
   //USER PERSONAL INFO STATES---------------------------------
@@ -71,7 +70,6 @@ export default function SignUp() {
     <section className="sign-up">
       <div className="App">
         <div>
-          <LargeLogo />
           <h1 className="sign-up-title">Sign-up</h1>
           <section className="sign-up-info">
             <form
