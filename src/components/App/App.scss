@@ -8,6 +8,7 @@
 @import "../../styles/animations.scss";
 @import "../../styles/typography.scss";
 @import "../../styles/mixins/mixins.scss";
+@import "../../styles/animations/_usb-animation-pulse.scss";
 
 .header {
   display: flex;
@@ -82,7 +83,7 @@
       
       
     }
-    button {
+    .top-button {
       background-color: $dark-teal;
       border: 2px solid $medium-teal;
       color: $medium-teal;
@@ -93,6 +94,9 @@
         background-color: $medium-teal;
         color: $dark-teal;
       }
+    }
+    .sign-in-button {
+      @extend %usb-animation-pulse;
     }
 
   }

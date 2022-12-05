@@ -19,7 +19,7 @@ export default function Header({userID, setUserID}) {
   let headerContainer = (
     <>
       <h3>
-        <Link to={"/login"} className="top-button">Sign In</Link>
+        <Link to={"/login"} className="top-button sign-in-button">Sign In</Link>
       </h3>
       <h3>
         <Link to={"/signUp"} className="top-button">Sign Up</Link>
