@@ -73,7 +73,8 @@
         color: $medium-teal;
       }
       &:hover {
-        color: $green;  
+        color: $green;
+        cursor: grab;  
       }
       &:active {
         color: $orange;
@@ -105,7 +106,7 @@
 
 .mainpage {
   display: flex;
-  background-color: $medium-teal;
+  background-color: $green;
   height: 90%;
 }
 
@@ -598,23 +599,21 @@
       padding: 1em;
       background-color: $dark-teal;
       color: $dark-teal;
-      padding: 2em;
+      padding: 1em;
       margin-top: 2em;
       margin-left: 3em;
   
       th {
-  
-        border: 5px solid $medium-teal;
-        background-color: $green;
-        border-radius: 10%;
-        color: $dark-teal;
-        padding: 1em;
+       
         
-        transition: all .5s ease-in-out 100ms;
-          &:hover {
-            transform: scale(1.1);
-            border-radius: 5%;
-          }
+        color: $yellow;
+        
+        padding: 1em;
+        border: 3px solid $medium-teal;
+        background-color: $dark-teal;
+        color: $yellow;
+        font-weight: bold;
+     
       }
         
       td {
@@ -626,18 +625,16 @@
           &:hover {
             transform: scale(1.1);
             border-radius: 5%;
-            background-color: $dark-teal;
+            background-color: $yellow;
           }
       }
       .meal-title {
-        border: 5px solid $medium-teal;
-        background-color: $green;
-        color: $dark-teal;
+        border: 3px solid $medium-teal;
+        background-color: $dark-teal;
+        color: $yellow;
         font-weight: bold;
-        transition: all .5s ease-in-out 100ms;
-          &:hover {
-            transform: scale(1.1);
-          }
+        
+         
       }
     }
   a {
@@ -646,10 +643,12 @@
     font-size: 18px;
     font-weight: 900;
     &:hover {
-      color: $yellow;
+      color: $dark-teal;
+      cursor: grab;
     }
     &:active {
       color: $orange;
+      
     }
   }
   
