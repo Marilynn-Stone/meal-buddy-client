@@ -6,7 +6,7 @@ export default function AccountInfo() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [password, setPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   //----------------------------------------------------------
 
@@ -34,7 +34,7 @@ export default function AccountInfo() {
           firstName,
           lastName,
           email,
-          password,
+          // password,
           phoneNumber,
           caloricTarget,
           dietCategory,
@@ -64,7 +64,7 @@ export default function AccountInfo() {
         setFirstName(result.data.first_name);
         setLastName(result.data.last_name);
         setEmail(result.data.email);
-        setPassword(result.data.password);
+        // setPassword(result.data.password);
         setPhoneNumber(result.data.cellphone_number);
         setCaloricTarget(result.data.caloric_target);
         setDietCategory(result.data.dietary_category);
@@ -127,13 +127,13 @@ export default function AccountInfo() {
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
               <br />
-              <label className="signup-label">Password </label>
+              {/* <label className="signup-label">Password </label>
               <input
                 value={password}
                 type="password"
                 name="password"
                 onChange={(e) => setPassword(e.target.value)}
-              ></input>
+              ></input> */}
               <br />
               <label className="signup-label">Phone Number </label>
               <input
