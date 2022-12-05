@@ -149,6 +149,7 @@
   align-items: center;
   background-color: $orange;
   color: $yellow;
+  
   .sidebar-text {
 
     background-color: $yellow;
@@ -161,11 +162,13 @@
     transition: background-color 5s ease-out 100ms;
     transition: color 5s ease-out 102ms;
     transition: all 0.5s ease-in-out 100ms;
+    box-shadow: 10px 10px 0px 0px $dark-teal;
     &:hover {
       background-color: $dark-teal;
       color: $yellow;
       transform: scale(1.1);
       border-radius: 40%;
+      box-shadow: 10px 10px 0px 0px $yellow;
     }
     a {
       font-size: 35px;
@@ -228,9 +231,7 @@
       color: $dark-teal;
       font-weight: bold;
       transition: all 0.5s ease-in-out 100ms;
-      &:hover {
-        transform: scale(1.1);
-      }
+      
     }
   }
 }
