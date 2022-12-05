@@ -1,17 +1,10 @@
-import { useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import "./App/App.scss";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 
 
-export default function Header() {
-
-  const [auth, setAuth] = useState({ loggedIn: false })
-
-  if ((localStorage.getItem("userID")) && auth.loggedIn === false) {
-    setAuth({ loggedIn: true })
-  }
+export default function Header({userID, setUserID}) {
  
   const navigate = useNavigate();
   const goHome = () => {
@@ -19,8 +12,7 @@ export default function Header() {
   };
 
   const logout = () => {
-    localStorage.removeItem("userID");
-    setAuth({ loggedIn: false});
+    setUserID(null);
     goHome();
   };
 
@@ -35,7 +27,7 @@ export default function Header() {
     </>
   )
 
-  if (auth.loggedIn) {
+  if (userID) {
     headerContainer = (
       <>
         <h3>
@@ -52,7 +44,6 @@ export default function Header() {
     <>
       <div className="header">
         <div className="header-left">
-      
           <img src="https://iili.io/HCnmwbt.png" alt="logo"/>
           
           <h1 className="child bounce">
