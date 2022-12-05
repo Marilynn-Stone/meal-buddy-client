@@ -9,13 +9,14 @@ export default function Sidebar() {
     <li className="sidebar-text">
       <Link to={"/TableMenu"}>Menu</Link>
     </li>
+    <li className="sidebar-text">
+      <Link to={"/howTo"}>How To</Link>
+    </li>  
     
     <li className="sidebar-text">
       <Link to={"/about"}>About</Link>
     </li>
-    <li className="sidebar-text">
-      <Link to={"/howTo"}>How To</Link>
-    </li>  
+
 </ul>
   </div>
   );

@@ -360,35 +360,77 @@
 
 }
 
-.controls {
-  display: flex;
-  flex-direction: column;
+
+.how-to-container {
+  padding: 2em;
+  margin: 3em;
   justify-content: space-between;
-  align-items: center;
-  margin: 1rem 3rem;
-  max-width: 18rem;
-  padding: 1rem;
-  background-color: $yellow;
+  font-weight: 900;
+  font-size: 24px;
+  background-color: $green;
+  box-shadow: $dark-teal 15px 15px 0px 0px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
-  .button {
-    background-color: $orange;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6em;
+  margin: 3em;
+  background-image: image();
+  border-radius: 15px;
+  button {
+    padding: 0.5em;
+    margin: 0.25em;
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: $green;
+    border: 2px solid $dark-teal;
+    
     color: $dark-teal;
     border-radius: 5px;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 1em;
     &:hover {
-      background-color: $medium-teal;
+      background-color: $dark-teal;
+      color: $green;
+     
+    }
+    &:active {
+      color: $yellow;
     }
   }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+  input {
+    background-color: $yellow;
+    font-size: 24px;
+    font-weight: 900;
+    height: 40px;
+    padding: 1em;
+    margin: 1em;
+    color: $dark-teal;
+    padding: 3px;
+    border-radius: 15px;
+    
+  }
+
 }
+}
+
+
 
 .daily-menu {
   
   background-color: $green;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+ 
 }
 
 .recipe-item {
@@ -472,19 +514,7 @@
   }
 }
 
-.controls-settings {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem 3rem;
-  max-width: 18rem;
-  padding: 1rem;
-  background-color: $green;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
 
-  }
 
   .user-index {
     display: flex;
@@ -519,10 +549,6 @@
 
 }
 
-.how-to {
-  background-color: $yellow;
-  padding: 2em;
-}
 
 
 
