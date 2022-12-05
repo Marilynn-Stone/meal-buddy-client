@@ -27,26 +27,31 @@ export default function SignUp() {
   // WILL BE MOVED TO HOOKS SERVER AND DB CALLS
   const signupCall = () => {
     return axios
-      .post("/users/signup", {
-        firstName,
-        lastName,
-        email,
-        password,
-        phoneNumber,
-        caloricTarget,
-        dietCategory,
-        gluten,
-        lactose,
-        peanut,
-        fish,
-        egg,
-        shellfish,
-        treeNuts,
-        soy,
-        sesame,
-      })
+      .post(
+        "/users/signup",
+        {
+          firstName,
+          lastName,
+          email,
+          password,
+          phoneNumber,
+          caloricTarget,
+          dietCategory,
+          gluten,
+          lactose,
+          peanut,
+          fish,
+          egg,
+          shellfish,
+          treeNuts,
+          soy,
+          sesame,
+        },
+        { withCredentials: true }
+      )
       .then((response) => {
-        console.log(response);
+        localStorage.setItem("userID", response.data.user);
+        console.log("HEELO", response.data);
       });
   };
 
@@ -58,7 +63,7 @@ export default function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     signupCall();
-    goLogin();
+    // goLogin();
   };
 
   return (
