@@ -45,21 +45,24 @@ export default function RecipeItem(props) {
   return (
   <div className="recipe-card"> 
   <section>
-    <h1>{recipe.mealName}</h1>
-    <br />
-    <h4>Servings: {recipe.servings} </h4>
-    <h4>Cook Time: {recipe.cookTimeInMinutes} </h4>
-    <br />
+    <div className="recipe-card-header">
     <img src={recipe.imageURL} alt="recipe" width="300px" />
-    <br />
+    <div className="recipe-card-header-text">
+      <h1>{recipe.mealName}</h1>
+      <h4>Servings: {recipe.servings} </h4>
+      <h4>Cook Time: {recipe.cookTimeInMinutes} </h4>
+      </div>
+      </div>
+
+   
     <div className="steps">
-    <h4 className="instructions">Required Ingredients:</h4>
+    <h1 className="instructions">Ingredients:</h1>
     <ol>
       {Object.values(recipe.ingredients).map((ingredient) => {
         return <li key={ingredient}>    ~  {ingredient}.<br /></li>;
       })}
     </ol>
-    <h4 className="instructions">Instructions:</h4>
+    <h1 className="instructions">Instructions:</h1>
     <ol>
       {Object.values(recipe.steps).map((step) => {
         return <li key={step}>    ~  {step}.<br /></li>;
