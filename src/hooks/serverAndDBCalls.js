@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const loginCall = (email, password) => {
+const loginCall = (email, password, setUserID) => {
   axios.post("http://localhost:8080/users/login", { email, password }, {withCredentials: true})
   .then((res) => {
-    localStorage.setItem("userID", res.data.user);
+    setUserID(res.data.user);
   })
   .catch((err) => {
     console.log("error with login", err.res.data);

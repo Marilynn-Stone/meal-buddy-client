@@ -3,7 +3,8 @@ import "../../styles/login.scss";
 import { loginCall } from "../../hooks/serverAndDBCalls";
 import { useNavigate } from "react-router-dom";
 
-export default function Login(session) {
+export default function Login({setUserID}) {
+   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,7 +15,7 @@ export default function Login(session) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginCall(email, password)
+    loginCall(email, password, setUserID)
     setEmail("");
     setPassword("");
     goHome();
