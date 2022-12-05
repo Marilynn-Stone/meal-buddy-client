@@ -28,6 +28,7 @@
   justify-content: space-between;
   padding: 1em;
   
+  
   color: $orange;
 
   // background-image: url(https://iili.io/HCnkGKG.png);
@@ -43,6 +44,7 @@
     img{
       width: 120px;
       padding: 2em;
+      margin-left: 3em;
     }
     h1 {
       font-size: 3em;
@@ -303,14 +305,7 @@
   }
 }
 
-.settings-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: $yellow;
-  color: $dark-teal;
-  padding: 1em;
-}
+
 .groc-list {
   display: flex;
   flex-direction: column;
@@ -331,22 +326,16 @@
     }
 }
 
-.meals {
 
-  .i-list {
-    display: flex;
-    flex-direction: column;
-    max-height: 100px;
-  }
 
   article {
     display: flex;
-    background-color: $yellow;
+    background-image: url(https://iili.io/HCkpGtI.png);
     flex-direction: column;
-    padding: 2rem;
+    padding: 1em;
     margin: 1rem 3rem;
     max-width: 18rem;
-    box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+    box-shadow: $dark-teal 15px 10px 0px 0px;
     border-radius: 15px;
       &:hover {
         background-color: $medium-teal;
@@ -355,30 +344,29 @@
 
   .recipe-image {
     border-radius: 5px;
-    box-shadow: 0 4px 8px 8px rgba(77, 77, 77, 0.15);
-  }
+    box-shadow: $dark-teal 5px 5px 0px 0px;
+    }
 
-}
+
 
 
 .how-to-container {
-  padding: 2em;
-  margin: 3em;
+  
+  margin: 2em;
   justify-content: space-between;
   font-weight: 900;
   font-size: 24px;
   background-color: $green;
   box-shadow: $dark-teal 15px 15px 0px 0px;
   border-radius: 15px;
+  max-width: 100%;
 }
 
 .controls-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 6em;
-  margin: 3em;
-  background-image: image();
+  align-items: flex-start;
+  // background-image: url(https://iili.io/HCkpGtI.png);
   border-radius: 15px;
   button {
     padding: 0.5em;
@@ -423,15 +411,19 @@
 
 }
 }
-
-
-
-.daily-menu {
-  
-  background-color: $green;
-  border-radius: 15px;
- 
+.meals {
+  display: flex;
+  flex-direction: row wrap;
+  padding: 1em;
+  .i-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+  }
 }
+
+
+
 
 .recipe-item {
   display: flex;
@@ -463,8 +455,7 @@
       font-weight: 900;
       background-color: $green;
       border-radius: 20%;
-      box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
-      font-size: 24px;
+      box-shadow: $dark-teal 15px 15px 0px 0px;      font-size: 24px;
       color: $dark-teal;
       margin-left: 6em;
       padding: 1em;
@@ -540,8 +531,7 @@
   font-weight: 700;
   background-color: $green;
   border-radius: 15%;
-  box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
-  font-size: 24px;
+  box-shadow: $dark-teal 15px 15px 0px 0px;  font-size: 24px;
   color: $dark-teal;
   margin-left: 6em;
   padding: 2em;
@@ -558,9 +548,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: $yellow;
-  
-  
+  background-color: $green;
+  padding: 3em;
   font-size: 18px;
   
   word-spacing: normal;
