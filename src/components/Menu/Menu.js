@@ -56,7 +56,6 @@ export default function Menu() {
           {/* call API */}
           <button onClick={getMealData}>Get Meals</button>
 
-          
         </section>
 
         <div className="daily-menu">
