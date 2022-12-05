@@ -5,7 +5,7 @@ export default function Sidebar() {
   return (
 
   <div className="sidebar">
-
+  <ul className="sidebar-text-container">
     <li className="sidebar-text">
       <Link to={"/TableMenu"}>Menu</Link>
     </li>
@@ -16,7 +16,7 @@ export default function Sidebar() {
     <li className="sidebar-text">
       <Link to={"/howTo"}>How To</Link>
     </li>  
-
+</ul>
   </div>
   );
 
