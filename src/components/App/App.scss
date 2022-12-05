@@ -10,6 +10,16 @@
 @import "../../styles/mixins/mixins.scss";
 @import "../../styles/animations/_usb-animation-pulse.scss";
 
+
+//custom mouse https://iili.io/HCkbTHQ.png
+
+// VARIABLES:
+// $dark-teal: #233D4D;
+// $orange: #FE7F2D;
+// $yellow: #FCCA46;
+// $green: #A1C181;
+// $medium-teal: #619B8A;
+
 .header {
   display: flex;
   background-color: $dark-teal;
@@ -120,7 +130,7 @@
 
 .mainpage {
   display: flex;
-  background-color: $green;
+  background-image: url(https://iili.io/HCkpGtI.png);
   height: 90%;
 }
 
@@ -615,7 +625,7 @@
 
 
 
-
+//custom mouse https://iili.io/HCkbTHQ.png
 
 // VARIABLES:
 // $dark-teal: #233D4D;
@@ -689,3 +699,12 @@
   }
   
  }
+
+ //custom mouse https://iili.io/HCkbTHQ.png
+
+// VARIABLES:
+// $dark-teal: #233D4D;
+// $orange: #FE7F2D;
+// $yellow: #FCCA46;
+// $green: #A1C181;
+// $medium-teal: #619B8A;
