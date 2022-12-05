@@ -411,19 +411,27 @@
   display: flex;
   color: $dark-teal;
   padding: 1em;
-  background-color: $yellow;
+  margin: 3em;
+  margin-left: 6em;
+  
 
     form{
-      font-weight: 800;
-      font-size: 18px;
+      font-weight: 900;
+      background-color: $green;
+      border-radius: 20%;
+      box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+      font-size: 24px;
       color: $dark-teal;
-      background-color: $yellow;
+      margin-left: 6em;
       padding: 1em;
     }
     button {
       background-color: $orange;
       color: $dark-teal;
+      font-weight: 900;
+      margin: 1em;
       border-radius: 5px;
+      font-size: 24px;
       padding: 1em;
       box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
       &:hover {
