@@ -31,16 +31,24 @@
     align-items: flex-start;
     justify-content: space-evenly;
     img{
-      width: 70px;
+      width: 120px;
+      padding: 2em;
     }
     h1 {
-      font-size: 2em;
+      font-size: 3em;
       margin: 0;
       padding: 0;
       margin-left: 0.5em;
       color: $orange;
       text-decoration: none;
+      text-shadow: $yellow 2px 4px 0;
+      span {
+        font-size: 72px;
+        text-shadow: $yellow 4px 2px 0;
+
+      }
     }
+    
   }
   .child {
     align-self: flex-end;
@@ -88,11 +96,13 @@
       border: 2px solid $medium-teal;
       color: $medium-teal;
       border-radius: 5px;
-      font-size: 1em;
+      font-size: 30px;
       font-weight: 600;
+      margin-right: 1em;
       &:hover {
         background-color: $medium-teal;
         color: $dark-teal;
+       
       }
     }
     .sign-in-button {
