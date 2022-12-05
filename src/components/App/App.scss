@@ -141,24 +141,23 @@
 
 .sidebar {
   font-family: sans-serif;
+  font-size: 26px;
   display: flex;
   padding: 1em;
   flex-direction: column;
   height: 100vh;
-  
-  
   align-items: center;
   background-color: $orange;
   color: $yellow;
-  transition: background-color 2s ease-out 100ms;
   .sidebar-text {
+
     background-color: $yellow;
     color: $dark-teal;
-    font-size: 24px;
+    font-size: px;
     font-weight: 900;
     border-radius: 50%;
-    padding: 01em;
-    margin: 1em;
+    padding: 1em;
+    margin: 1.5em;
     transition: background-color 5s ease-out 100ms;
     transition: color 5s ease-out 102ms;
     transition: all 0.5s ease-in-out 100ms;
@@ -169,6 +168,7 @@
       border-radius: 40%;
     }
     a {
+      font-size: 35px;
       text-decoration: none;
       font-family: sans-serif;
       &:visited {
@@ -425,17 +425,28 @@
       margin-left: 6em;
       padding: 1em;
     }
+   
+
     button {
-      background-color: $orange;
+      padding: 0.5em;
+      margin: 0.25em;
+      text-decoration: none;
+      font-family: sans-serif;
+      background-color: $green;
+      border: 2px solid $dark-teal;
+      
       color: $dark-teal;
-      font-weight: 900;
-      margin: 1em;
       border-radius: 5px;
-      font-size: 24px;
-      padding: 1em;
-      box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+      font-size: 30px;
+      font-weight: 600;
+      margin-right: 1em;
       &:hover {
-        background-color: $medium-teal;
+        background-color: $dark-teal;
+        color: $green;
+       
+      }
+      &:active {
+        color: $yellow;
       }
     }
 }
@@ -494,8 +505,16 @@
 
 
 .about-us {
-  background-color: $medium-teal;
+  font-weight: 700;
+  background-color: $green;
+  border-radius: 15%;
+  box-shadow: 0 4px 8px 5px rgba(77, 77, 77, 0.15);
+  font-size: 24px;
+  color: $dark-teal;
+  margin-left: 6em;
   padding: 2em;
+  margin-top: 3em;
+
 }
 
 .how-to {
