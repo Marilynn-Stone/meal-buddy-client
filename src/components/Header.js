@@ -4,22 +4,46 @@ import "./App/App.scss";
 import { AiFillHome, AiFillSetting } from "react-icons/ai";
 
 
-export default function Header() {
-
+export default function Header({userID, setUserID}) {
+ 
   const navigate = useNavigate();
   const goHome = () => {
     navigate("../")
   };
+
   const logout = () => {
-    localStorage.removeItem("userID");
+    setUserID(null);
     goHome();
+  };
+
+  let headerContainer = (
+    <>
+      <h3>
+        <Link to={"/login"} className="top-button">Sign In</Link>
+      </h3>
+      <h3>
+        <Link to={"/signUp"} className="top-button">Sign Up</Link>
+      </h3>
+    </>
+  )
+
+  if (userID) {
+    headerContainer = (
+      <>
+        <h3>
+          <button className="top-button" type="submit" onClick={logout}>Sign Out</button>
+        </h3>
+        <h3>
+          <Link to={"/dashboard"} className="top-button"><AiFillSetting /></Link>
+        </h3>
+      </>
+    ) 
   }
 
   return (
     <>
       <div className="header">
         <div className="header-left">
-      
           <img src="https://iili.io/HCnmwbt.png" alt="logo"/>
           
           <h1 className="child bounce">
@@ -28,24 +52,10 @@ export default function Header() {
 
         </div>
         <div className="header-right">
-          <button className="header-button">
-            <Link to={"/login"} className="header-button">Sign In</Link>
-          </button>
-          
-            {/* <div className="top-button"> */}
-              <button className="header-button" type="submit" onClick={logout}>Sign Out</button>
-            {/* </div>   */}
-          
-          <button>
-            <Link to={"/signUp"} className="header-button">Sign Up</Link>
-          </button>
-          <h3>
-            <Link to={"/dashboard"} className="top-button"><AiFillSetting /></Link>
-          </h3>
+          {headerContainer}
           <h1>
           <Link to={"/"}><AiFillHome /></Link>
           </h1>
-
         </div>
       </div>
       <section className="mainpage">
