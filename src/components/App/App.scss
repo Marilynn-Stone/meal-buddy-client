@@ -118,7 +118,9 @@
     .sign-in-button {
       @extend %usb-animation-pulse;
     }
-
+    .sign-up-button {
+      @extend %usb-animation-pulse;
+    }
   }
 
 

@@ -22,7 +22,7 @@ export default function Header({userID, setUserID}) {
         <Link to={"/login"} className="top-button sign-in-button">Sign In</Link>
       </h3>
       <h3>
-        <Link to={"/signUp"} className="top-button">Sign Up</Link>
+        <Link to={"/signUp"} className="top-button sign-up-button">Sign Up</Link>
       </h3>
     </>
   )

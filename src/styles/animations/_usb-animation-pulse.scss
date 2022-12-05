@@ -13,6 +13,8 @@
  * ```
  */
 
+ @import '../variables';
+
 %usb-animation-pulse {
   $usb-pulse-animation-speed: 2s !default;
 
@@ -23,7 +25,7 @@
   }
 }
 
-$usb-pulse-animation-primary-color: rgba(38, 166, 154, 0.4) !default;
+$usb-pulse-animation-primary-color: $yellow !default;
 $usb-pulse-animation-secondary-color: rgba(38, 166, 154, 0) !default;
 
 @-webkit-keyframes pulse {
