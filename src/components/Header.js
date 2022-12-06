@@ -12,7 +12,7 @@ export default function Header({userID, setUserID}) {
   };
 
   const logout = () => {
-    setUserID(null);
+    setUserID();
     goHome();
   };
 
@@ -59,7 +59,7 @@ export default function Header({userID, setUserID}) {
         </div>
       </div>
       <section className="mainpage">
-        <div className="mainpage-sidebar"> <Sidebar /> </div>
+        <div className="mainpage-sidebar"> <Sidebar userID={userID}/> </div>
         <div className="mainpage-content"> <Outlet className="out-let"/> </div>
       </section>
     </>
