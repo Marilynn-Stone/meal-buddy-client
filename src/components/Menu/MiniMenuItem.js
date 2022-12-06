@@ -29,7 +29,9 @@ export default function MiniMenuItem(props) {
       <a href={recipe.sourceUrl} target="_blank" rel="noreferrer">
         {/* call API */}
         {/* <button onClick={() => console.log("Button Clicked")}>RECIPE</button> */}
-        <Link to={`/RecipeItem/${props.meal.id}`}>{props.meal.title}</Link>
+        <Link to={`/RecipeItem/${props.meal.id}`}>
+          <button>Recipe</button>
+        </Link>
       </a>
     </article>
   );
