@@ -42,15 +42,17 @@ export default function Header({userID, setUserID}) {
 
   return (
     <>
-      <div className="header">
+      <div className="header" id="whole-header">
         <div className="header-left">
           <img src="https://iili.io/HCnmwbt.png" alt="logo"/>
-          
-          <h1 className="child bounce">
-            <span>M</span>eal<span>B</span>uddy
-          </h1>
+          </div>
+          <div className="header-center">
+            <h1 className="child bounce">
+              <span>M</span>eal<span>B</span>uddy
+            </h1>
+          </div>
 
-        </div>
+        
         <div className="header-right">
           {headerContainer}
           <h1>
@@ -59,8 +61,15 @@ export default function Header({userID, setUserID}) {
         </div>
       </div>
       <section className="mainpage">
-        <div className="mainpage-sidebar"> <Sidebar userID={userID}/> </div>
-        <div className="mainpage-content"> <Outlet className="out-let"/> </div>
+      
+        <div className="mainpage-sidebar"> 
+          <Sidebar userID={userID}/> 
+        </div>
+        <div className="mainpage-content"> 
+          <Outlet className="out-let"/> 
+          <img className="big-logo" src={"https://iili.io/HC1ic91.png"} alt="logo"/>
+
+        </div>
       </section>
     </>
   );
