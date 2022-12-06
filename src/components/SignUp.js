@@ -57,7 +57,7 @@ export default function SignUp() {
 
   const navigate = useNavigate();
   const goHome = () => {
-    navigate("../");
+    navigate("../WelcomeTo");
   };
 
   const handleSubmit = (e) => {
