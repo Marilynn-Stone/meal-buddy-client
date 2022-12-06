@@ -68,16 +68,18 @@ export default function SignUp() {
 
   return (
     <section className="sign-up">
-      <div className="App">
         <div>
-          <h1 className="sign-up-title">Sign-up</h1>
+          
           <section className="sign-up-info">
+          
             <form
               autoComplete="off"
               onSubmit={(event) => event.preventDefault()}
               className="user-info"
               id="user-info"
             >
+              <h1 className="sign-up-title">Sign-up</h1>
+              <br />
               <label className="signup-label">First Name </label>
 
               <input
@@ -154,95 +156,100 @@ export default function SignUp() {
                   Check our how to for more details on diets
                 </p>
                 <br />
-                <label className="signup-label">Dietary Restrictions</label>
-                <section className="restrictions">
-                  <label>Gluten</label>
-                  <input
-                    type="checkbox"
-                    name="gluten"
-                    checked={gluten}
-                    onChange={(e) => setGluten(!gluten)}
-                  ></input>
-                  <br />
-                  <label>lactose</label>
-                  <input
-                    type="checkbox"
-                    name="lactose"
-                    checked={lactose}
-                    onChange={(e) => setLactose(!lactose)}
-                  ></input>
+                <div className="footer-container">
+                  <label className="signup-label">Dietary Restrictions</label>
+                  <section className="restrictions">
+                    <label>Gluten</label>
+                    <input
+                      type="checkbox"
+                      name="gluten"
+                      checked={gluten}
+                      onChange={(e) => setGluten(!gluten)}
+                    ></input>
+                    <br />
+                    <label>lactose</label>
+                    <input
+                      type="checkbox"
+                      name="lactose"
+                      checked={lactose}
+                      onChange={(e) => setLactose(!lactose)}
+                    ></input>
 
-                  <br />
-                  <label>Peanut</label>
-                  <input
-                    type="checkbox"
-                    name="peanut"
-                    checked={peanut}
-                    onChange={(e) => setPeanut(!peanut)}
-                  ></input>
+                    <br />
+                    <label>Peanut</label>
+                    <input
+                      type="checkbox"
+                      name="peanut"
+                      checked={peanut}
+                      onChange={(e) => setPeanut(!peanut)}
+                    ></input>
 
-                  <br />
-                  <label>Fish</label>
-                  <input
-                    type="checkbox"
-                    name="fish"
-                    checked={fish}
-                    onChange={(e) => setFish(!fish)}
-                  ></input>
+                    <br />
+                    <label>Fish</label>
+                    <input
+                      type="checkbox"
+                      name="fish"
+                      checked={fish}
+                      onChange={(e) => setFish(!fish)}
+                    ></input>
 
-                  <br />
-                  <label>Eggs</label>
-                  <input
-                    type="checkbox"
-                    name="egg"
-                    checked={egg}
-                    onChange={(e) => setEgg(!egg)}
-                  ></input>
+                    <br />
+                    <label>Eggs</label>
+                    <input
+                      type="checkbox"
+                      name="egg"
+                      checked={egg}
+                      onChange={(e) => setEgg(!egg)}
+                    ></input>
 
-                  <br />
-                  <label>Shellfish</label>
-                  <input
-                    type="checkbox"
-                    name="shellfish"
-                    checked={shellfish}
-                    onChange={(e) => setShellfish(!shellfish)}
-                  ></input>
+                    <br />
+                    <label>Shellfish</label>
+                    <input
+                      type="checkbox"
+                      name="shellfish"
+                      checked={shellfish}
+                      onChange={(e) => setShellfish(!shellfish)}
+                    ></input>
 
-                  <br />
-                  <label>Tree Nuts</label>
-                  <input
-                    type="checkbox"
-                    name="tree-nuts"
-                    checked={treeNuts}
-                    onChange={(e) => setTreeNuts(!treeNuts)}
-                  ></input>
+                    <br />
+                    <label>Tree Nuts</label>
+                    <input
+                      type="checkbox"
+                      name="tree-nuts"
+                      checked={treeNuts}
+                      onChange={(e) => setTreeNuts(!treeNuts)}
+                    ></input>
 
-                  <br />
-                  <label>Soy</label>
-                  <input
-                    type="checkbox"
-                    name="soy"
-                    checked={soy}
-                    onChange={(e) => setSoy(!soy)}
-                  ></input>
+                    <br />
+                    <label>Soy</label>
+                    <input
+                      type="checkbox"
+                      name="soy"
+                      checked={soy}
+                      onChange={(e) => setSoy(!soy)}
+                    ></input>
 
-                  <br />
-                  <label>Sesame</label>
-                  <input
-                    type="checkbox"
-                    name="sesame"
-                    checked={sesame}
-                    onChange={(e) => setSesame(!sesame)}
-                  ></input>
+                    <br />
+                    <label>Sesame</label>
+                    <input
+                      type="checkbox"
+                      name="sesame"
+                      checked={sesame}
+                      onChange={(e) => setSesame(!sesame)}
+                    ></input>
                 </section>
                 {/* <label className="signup-label">Other </label>
                 <input type="text" name="restriction"></input> */}
+                </div>
               </section>
+             
             </form>
             <button onClick={handleSubmit}>Submit</button>
           </section>
+          
         </div>
-      </div>
+        
+      
     </section>
   );
 }
