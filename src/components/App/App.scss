@@ -19,11 +19,11 @@
 // $yellow: #FCCA46;
 // $green: #A1C181;
 // $medium-teal: #619B8A;
-App {
-  box-sizing: border-box;
-}
+
 #root {
   background-color: $dark-teal;
+  box-sizing: border-box;
+
 }
 .header {
   display: flex;
@@ -573,11 +573,11 @@ App {
   background-color: $green;
   border-radius: 15%;
   box-shadow: $dark-teal 15px 15px 0px 0px;  
-  font-size: 24px;
+  font-size: 20px;
   color: $dark-teal;
-  margin-left: 6em;
-  padding: 2em;
-  margin-top: 3em;
+  width: 80%;
+  padding: 1em;
+  
 
 }
 

@@ -4,11 +4,11 @@ export default function About() {
     <>
       <div className="App">
    <section className="about-us">
-    <h1>About Us</h1>
-    <div>This MF app rules the skool! Let us tell you all about it...</div>
-    <p> More interesting things and stuff to be inserted here.</p>
-    <p> More interesting things and stuff to be inserted here.</p>
-    <p> More interesting things and stuff to be inserted here.</p>
+    
+    <h1>MealBuddy takes the guess-work out of meal-planning!</h1>
+    <p> Simply tell us about your daily calorie goals, dietary category, and/or dietary restrictions, and we'll build you a customized meal-plan (including recipes!)! </p>
+    <p> Still not sure about MealBuddy? </p>
+    <p> Try out our Demo for a sample daily meal plan. </p>
   </section>
   </div>
   </>
