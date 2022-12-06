@@ -28,9 +28,7 @@
 .header {
   display: flex;
   background-color: $dark-teal;
-  
   justify-content: space-between;
-
   width: 100vw;
   position: fixed;
   color: $orange;
@@ -58,8 +56,6 @@
 
     h1 {
       font-size: 3em;
-      margin: 0;
-      padding: 0;
       margin-left: 0.5em;
       color: $orange;
       text-decoration: none;

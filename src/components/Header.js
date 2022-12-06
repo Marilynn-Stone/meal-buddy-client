@@ -55,9 +55,9 @@ export default function Header({userID, setUserID}) {
         
         <div className="header-right">
           {headerContainer}
-          <h1>
-          <Link to={"/"} className="top-button"><AiFillHome /></Link>
-          </h1>
+          <h3>
+            <Link to={"/"} className="top-button"><AiFillHome /></Link>
+          </h3>
         </div>
       </div>
       <section className="mainpage">
