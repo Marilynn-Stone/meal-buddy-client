@@ -40,12 +40,12 @@ const root = createRoot(container);
             <Route path="dailyMenu" element={<DailyMenu />} />
             <Route path="miniMenuItem" element={<MiniMenuItem />} />
 
-            <Route path="TableMenu" element={<TableMenu />} />
-            <Route path="TableMenuItem" element={<TableMenuItem />} />
+            <Route path="tableMenu" element={<TableMenu />} />
+            <Route path="tableMenuItem" element={<TableMenuItem />} />
 
             <Route path="groceryList" element={<GroceryList />} />
 
-            <Route path="RecipeItem/:id" element={<RecipeItem />} />
+            <Route path="recipeItem/:id" element={<RecipeItem />} />
 
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dietarySettings" element={<DietarySettings />} />
