@@ -17,6 +17,7 @@ import DietarySettings from "./components/user/DietarySettings";
 import GroceryList from "./components/GroceryList/GroceryList";
 import Header from "./components/Header";
 import MiniMenuItem from "./components/Menu/MiniMenuItem";
+import WelcomeBack from "./components/WelcomeBack";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -35,6 +36,7 @@ const root = createRoot(container);
             <Route path="howTo" element={<HowTo />} />
             <Route path="logIn" element={<Login setUserID={setUserID}/>} />
             <Route path="signUp" element={<SignUp setUserID={setUserID}/>} />
+            <Route path="welcomeBack" element={<WelcomeBack  />} />
 
             <Route path="menu" element={<Menu />} />
             <Route path="dailyMenu" element={<DailyMenu />} />

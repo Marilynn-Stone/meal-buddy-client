@@ -132,12 +132,6 @@
       @extend %usb-animation-pulse;
     }
   }
-
-
-
-
-
-
 }
 
 .mainpage {
@@ -158,9 +152,6 @@
     }
   }
 }
-
-
-
 
 .sidebar {
   font-family: sans-serif;
@@ -196,8 +187,6 @@
         border-radius: 40%;
         box-shadow: 10px 10px 0px 0px $yellow;
       }
-   
-    
     }
   }
     a {
@@ -213,11 +202,8 @@
       }
       &:hover {
         color: $yellow;
-
-      }
-    
+      }    
   }
-
 }
 
 
@@ -559,13 +545,25 @@
     }
   }
 
+.welcome-back {
+  display: block;
+  font-weight: 700;
+  background-color: $green;
+  border-radius: 15%;
+  box-shadow: $dark-teal 15px 15px 0px 0px;  
+  font-size: 40px;
+  color: $dark-teal;
+  width: max-content;
+  height: max-content;
+  padding: 0.5em;
+}
 
 .about-us {
   font-weight: 700;
   background-color: $green;
   border-radius: 15%;
   box-shadow: $dark-teal 15px 15px 0px 0px;  
-  font-size: 20px;
+  font-size: 40px;
   color: $dark-teal;
   width: 80%;
   padding: 1em;
