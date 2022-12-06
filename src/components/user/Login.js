@@ -10,7 +10,7 @@ export default function Login({setUserID}) {
 
   const navigate = useNavigate();
   const goHome = () => {
-    navigate("../")
+    navigate("../WelcomeBack");
   };
 
   const handleSubmit = (e) => {
