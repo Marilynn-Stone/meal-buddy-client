@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function AccountInfo() {
   //USER PERSONAL INFO STATES---------------------------------
@@ -80,7 +81,13 @@ export default function AccountInfo() {
       });
   };
 
+  const navigate = useNavigate();
+  const goMenu = () => {
+    navigate("../tableMenu");
+  };
+
   const handleSubmit = (e) => {
+    goMenu();
     e.preventDefault();
     accountInfoCall();
   };
@@ -93,7 +100,7 @@ export default function AccountInfo() {
     <section className="sign-up">
       <div className="App">
         <div>
-          <h1 className="sign-up-title">Sign-up</h1>
+          <h1 className="sign-up-title">Account Settings</h1>
           <section className="sign-up-info">
             <form
               autoComplete="off"
@@ -171,6 +178,9 @@ export default function AccountInfo() {
                   <option value="low-fodmap">Low FODMAP</option>
                   <option value="whole30">Whole30</option>
                 </select>
+                <p className="sign-up-helper">
+                  Check our how to for more details on diets
+                </p>
                 <br />
                 <label className="signup-label">Dietary Restrictions</label>
                 <section className="restrictions">
@@ -253,8 +263,8 @@ export default function AccountInfo() {
                     onChange={(e) => setSesame(!sesame)}
                   ></input>
                 </section>
-                <label className="signup-label">Other </label>
-                <input type="text" name="restriction"></input>
+                {/* <label className="signup-label">Other </label>
+                <input type="text" name="restriction"></input> */}
               </section>
             </form>
             <button onClick={handleSubmit}>Submit</button>

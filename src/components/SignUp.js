@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function SignUp({setUserID}) {
+export default function SignUp() {
   //USER PERSONAL INFO STATES---------------------------------
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -25,7 +25,7 @@ export default function SignUp({setUserID}) {
   const [sesame, setSesame] = useState(false);
 
   // WILL BE MOVED TO HOOKS SERVER AND DB CALLS
-  const signupCall = (setUserID) => {
+  const signupCall = () => {
     return axios
       .post(
         "/users/signup",
@@ -50,31 +50,31 @@ export default function SignUp({setUserID}) {
         { withCredentials: true }
       )
       .then((response) => {
-        setUserID(response.data.user);
-        console.log("HELLO", response.data);
+        localStorage.setItem("userID", response.data.user);
+        console.log("HEELO", response.data);
       });
   };
 
   const navigate = useNavigate();
   const goHome = () => {
-    navigate("../")
+    navigate("../");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signupCall(setUserID);
-    goHome();;
+    signupCall();
+    goHome();
   };
 
   return (
     <section className="sign-up">
-      
+      <div className="App">
         <div>
           <h1 className="sign-up-title">Sign-up</h1>
           <section className="sign-up-info">
             <form
               autoComplete="off"
-              onSubmit={handleSubmit}
+              onSubmit={(event) => event.preventDefault()}
               className="user-info"
               id="user-info"
             >
@@ -107,6 +107,10 @@ export default function SignUp({setUserID}) {
                 name="password"
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
+              <p className="sign-up-helper">
+                Password must be 8 characters and include a special character
+                (!@#$%)
+              </p>
               <br />
               <label className="signup-label">Phone Number </label>
               <input
@@ -123,7 +127,11 @@ export default function SignUp({setUserID}) {
                   name="caloric-target"
                   onChange={(e) => setCaloricTarget(e.target.value)}
                 ></input>
-                <br />
+                <p className="sign-up-helper">target is for daily goal</p>
+                <p className="sign-up-helper">
+                  general recommended daily calories is 2,000 for women and
+                  2,500 for men
+                </p>
                 <label className="signup-label">Dietary Category</label>
                 <select
                   name="dietary-category"
@@ -142,9 +150,11 @@ export default function SignUp({setUserID}) {
                   <option value="low-fodmap">Low FODMAP</option>
                   <option value="whole30">Whole30</option>
                 </select>
+                <p className="sign-up-helper">
+                  Check our how to for more details on diets
+                </p>
                 <br />
-                <br />
-                <label className="signup-label">Dietary Restrictions</label><br />
+                <label className="signup-label">Dietary Restrictions</label>
                 <section className="restrictions">
                   <label>Gluten</label>
                   <input
@@ -225,15 +235,14 @@ export default function SignUp({setUserID}) {
                     onChange={(e) => setSesame(!sesame)}
                   ></input>
                 </section>
-                <label className="signup-label">Other </label>
-                <input type="text" name="restriction"></input>
+                {/* <label className="signup-label">Other </label>
+                <input type="text" name="restriction"></input> */}
               </section>
-
-            <button type="submit">Submit</button>
             </form>
+            <button onClick={handleSubmit}>Submit</button>
           </section>
         </div>
-      
+      </div>
     </section>
   );
 }
