@@ -41,22 +41,29 @@ export default function Menu() {
 
   return (
     <div className="App">
-      <section className="controls">
-        <input
-          type="number"
-          placeholder="Calories (e.g 2000)"
-          onChange={handleCalories}
-        />
-        <input type="text" placeholder="diet" onChange={handleDiet} />
-        <input type="text" placeholder="exclude" onChange={handleExclude} />
-        <div></div>
-        {/* call API */}
-        <button onClick={getMealData}>Get Meals</button>
+      <section className="controls-container">
+
+        <section className="controls">
+          <div className="input-container">
+            <input
+              type="number"
+              placeholder="Calories (e.g 2000)"
+              onChange={handleCalories}
+            />
+            <input type="text" placeholder="diet" onChange={handleDiet} />
+            <input type="text" placeholder="exclude" onChange={handleExclude} />
+          </div>
+          {/* call API */}
+          <button onClick={getMealData}>Get Meals</button>
+
+        </section>
+
+        <div className="daily-menu">
+          {/* if mealData has info render DailyMenu */}
+          <div>{mealData && <DailyMenu mealData={mealData} />}</div>
+        </div>
+
       </section>
-      <div className="daily-menu">
-        {/* if mealData has info render DailyMenu */}
-        <div>{mealData && <DailyMenu mealData={mealData} />}</div>
-      </div>
     </div>
   );
 }

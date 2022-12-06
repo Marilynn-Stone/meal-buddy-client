@@ -26,10 +26,10 @@ export default function Login({setUserID}) {
       <div className="App">
       <div className="login-wrapper">      
         <form autoComplete="off" onSubmit={handleSubmit}>
-        <h1>Please Sign-in</h1>
+        <h1>Please Sign-in...</h1>
         <br />
           <label>
-            Email
+            Email <br />
             <input
               type="text"
               name="email"
@@ -40,7 +40,7 @@ export default function Login({setUserID}) {
           <br />
           <br />
           <label>
-            Password
+            Password <br />
             <input
               type="password"
               name="password"
