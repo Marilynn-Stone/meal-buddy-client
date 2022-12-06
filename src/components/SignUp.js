@@ -68,7 +68,7 @@ export default function SignUp({setUserID}) {
 
   return (
     <section className="sign-up">
-      <div className="App">
+      
         <div>
           <h1 className="sign-up-title">Sign-up</h1>
           <section className="sign-up-info">
@@ -123,6 +123,7 @@ export default function SignUp({setUserID}) {
                   name="caloric-target"
                   onChange={(e) => setCaloricTarget(e.target.value)}
                 ></input>
+                <br />
                 <label className="signup-label">Dietary Category</label>
                 <select
                   name="dietary-category"
@@ -142,7 +143,8 @@ export default function SignUp({setUserID}) {
                   <option value="whole30">Whole30</option>
                 </select>
                 <br />
-                <label className="signup-label">Dietary Restrictions</label>
+                <br />
+                <label className="signup-label">Dietary Restrictions</label><br />
                 <section className="restrictions">
                   <label>Gluten</label>
                   <input
@@ -231,7 +233,7 @@ export default function SignUp({setUserID}) {
             </form>
           </section>
         </div>
-      </div>
+      
     </section>
   );
 }
