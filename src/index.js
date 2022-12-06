@@ -18,6 +18,7 @@ import GroceryList from "./components/GroceryList/GroceryList";
 import Header from "./components/Header";
 import MiniMenuItem from "./components/Menu/MiniMenuItem";
 import WelcomeBack from "./components/WelcomeBack";
+import WelcomeTo from "./components/WelcomeTo";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -35,8 +36,9 @@ const root = createRoot(container);
             <Route path="about" element={<About />} />
             <Route path="howTo" element={<HowTo />} />
             <Route path="logIn" element={<Login setUserID={setUserID}/>} />
+            <Route path="welcomeBack" element={<WelcomeBack />} />
             <Route path="signUp" element={<SignUp setUserID={setUserID}/>} />
-            <Route path="welcomeBack" element={<WelcomeBack  />} />
+            <Route path="welcomeTo" element={<WelcomeTo />} />
 
             <Route path="menu" element={<Menu />} />
             <Route path="dailyMenu" element={<DailyMenu />} />

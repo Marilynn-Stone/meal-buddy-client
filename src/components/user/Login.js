@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../styles/login.scss";
 import { loginCall } from "../../hooks/serverAndDBCalls";
 import { useNavigate } from "react-router-dom";
 
