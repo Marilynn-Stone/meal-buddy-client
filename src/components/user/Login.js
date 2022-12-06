@@ -23,7 +23,7 @@ export default function Login({setUserID}) {
 
   return (
     <>
-      <div className="App">
+      
       <div className="login-wrapper">      
         <form autoComplete="off" onSubmit={handleSubmit}>
         <h1>Please Sign-in...</h1>
@@ -52,7 +52,7 @@ export default function Login({setUserID}) {
               <button type="submit">Submit</button>
           </div>
         </form>
-      </div>
+      
       </div>
     </>
  
