@@ -19,14 +19,16 @@
 // $yellow: #FCCA46;
 // $green: #A1C181;
 // $medium-teal: #619B8A;
-
+App {
+  box-sizing: border-box;
+}
 .header {
   display: flex;
   background-color: $dark-teal;
   box-sizing: border-box;
-  width: 100vw;
   justify-content: space-between;
   padding: 1em;
+  width: 100vw;
   
   
   color: $orange;
@@ -361,7 +363,6 @@
   font-weight: 900;
   font-size: 24px;
   background-color: $green;
-  box-shadow: $dark-teal 15px 15px 0px 0px;
   border-radius: 15px;
   max-width: 100%;
 }
@@ -450,11 +451,12 @@
 .login-wrapper {
   display: flex;
   color: $dark-teal;
-  padding: 1em;
+  padding: 2em;
   margin: 3em;
   margin-left: 6em;
+  justify-content: space-between;
   
-
+    
     form{
       font-weight: 900;
       background-color: $green;
@@ -463,6 +465,17 @@
       color: $dark-teal;
       margin-left: 6em;
       padding: 1em;
+    }
+    input {
+      background-color: $yellow;
+      font-size: 24px;
+      font-weight: 900;
+      height: 30px;
+      padding: 1em;
+      color: $dark-teal;
+      padding: 3px;
+      border-radius: 15px;
+
     }
    
 
@@ -487,6 +500,11 @@
       &:active {
         color: $yellow;
       }
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 900;
+      color: $dark-teal;
     }
 }
 
@@ -535,7 +553,8 @@
   font-weight: 700;
   background-color: $green;
   border-radius: 15%;
-  box-shadow: $dark-teal 15px 15px 0px 0px;  font-size: 24px;
+  box-shadow: $dark-teal 15px 15px 0px 0px;  
+  font-size: 24px;
   color: $dark-teal;
   margin-left: 6em;
   padding: 2em;
@@ -543,17 +562,16 @@
 
 }
 
-
-
-
-
-
 .sign-up {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: $green;
+  border-radius: 15%;
+  box-shadow: $dark-teal 15px 15px 0px 0px; 
   padding: 3em;
+  margin-top: 3em;
+  margin-left: 6em;
   font-size: 18px;
   
   word-spacing: normal;
