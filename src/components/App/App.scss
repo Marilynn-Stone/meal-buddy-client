@@ -173,7 +173,7 @@
   align-content: center;;
   padding: 1em;
   flex-direction: column;
-  height: 900px;
+  height: 1200px;
   align-items: center;
   background-color: $orange;
   color: $yellow;
@@ -363,6 +363,7 @@
     flex-direction: column;
     margin: 10px;
     padding: 10px;
+    object-fit: placeholder;
     
     box-shadow: $dark-teal 15px 10px 0px 0px;
     border-radius: 15px;
@@ -374,9 +375,10 @@
   .recipe-image {
     border-radius: 5px;
     width: 160px;
-    box-shadow: $dark-teal 5px 5px 0px 0px;
-    }
-
+    box-shadow: $dark-teal 5px 3px 0px 0px;
+    
+    width: 160px;
+  }
 
 
 
@@ -442,6 +444,7 @@
     // flex-direction: column;
     max-height: 140px;
     max-width: 100vh;
+    object-fit: placeholder !important;
   }
 }
 
@@ -469,11 +472,7 @@
 .login-wrapper {
   display: flex;
   color: $dark-teal;
-  padding: 2em;
-  margin: 3em;
-  margin-left: 6em;
   justify-content: space-between;
-  
     
     form{
       font-weight: 900;
@@ -686,34 +685,33 @@
 
 .recipe-card {
  
-  
-  //@include scrollbars(30px, #FCCA46, #FE7F2D);
-  
-  // overflow-y: scroll;
-
-  max-height: 100vh;
+  @include scrollbars(30px, #FCCA46, #FE7F2D);
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $green;
-  max-width: 100%;
-  color: $dark-teal;
-  padding: 3em;  
-  
+  max-width: 90%;
+  // max-height: 900px;
 
+  color: $dark-teal;
+  
   .recipe-card-header {
     display: flex;
     flex-direction: row;
+    img {
+      height: 200px;
+      width: 300px;
+      border-radius: 15%;
+      padding: 1em;
+    }
     .recipe-card-header-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 1em;
-      margin: 1em;
       color: $dark-teal;
-      font-weight: 700;
       font-size: 18px;
       border-radius: 15px;
       border: 2px solid $dark-teal;
@@ -725,11 +723,10 @@
     justify-content: center;
     align-items: center;
     
-    padding: 0.5rem;
     
   }
   h1{
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 900;
   
   }
@@ -765,12 +762,7 @@
   li {
     padding: 4px;
   }
-  img {
-    height: 200px;
-    width: 300px;
-    border-radius: 15%;
-    padding: 1em;
-  }
+
 }
 
 
