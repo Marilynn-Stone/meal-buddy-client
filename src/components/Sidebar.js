@@ -7,14 +7,14 @@ export default function Sidebar({userID}) {
     <ul className="sidebar-text-container">     
         {userID &&
           <li className="sidebar-text">
-            <Link to={"/tableMenu"}>Weekly Menu</Link>
+            <Link to={"/tableMenu"}>Menu</Link>
           </li> 
         }
       <li className="sidebar-text">
         <Link to={"/about"}>About</Link>
       </li>
       <li className="sidebar-text">
-        <Link to={"/howTo"}>How To</Link>
+        <Link to={"/howTo"}>Demo</Link>
       </li>  
     </ul>
   </div>
