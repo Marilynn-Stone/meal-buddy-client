@@ -1,6 +1,6 @@
-export default function SidebarLoggedIn() {
+export default function WelcomeBack() {
   return (
-    <section className="welcome-back">
+    <section className="welcome">
       <p>Welcome Back, Buddy!</p>
     </section>
   );
