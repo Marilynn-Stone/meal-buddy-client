@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function SignUp() {
+export default function SignUp({setUserID}) {
   //USER PERSONAL INFO STATES---------------------------------
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -25,7 +25,7 @@ export default function SignUp() {
   const [sesame, setSesame] = useState(false);
 
   // WILL BE MOVED TO HOOKS SERVER AND DB CALLS
-  const signupCall = () => {
+  const signupCall = ({setUserID}) => {
     return axios
       .post(
         "/users/signup",
@@ -50,8 +50,8 @@ export default function SignUp() {
         { withCredentials: true }
       )
       .then((response) => {
-        localStorage.setItem("userID", response.data.user);
-        console.log("HEELO", response.data);
+        setUserID(response.data.user);
+        console.log("HELLO", response.data);
       });
   };
 
@@ -62,7 +62,7 @@ export default function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signupCall();
+    signupCall(setUserID);
     goHome();
   };
 
@@ -74,7 +74,7 @@ export default function SignUp() {
           
             <form
               autoComplete="off"
-              onSubmit={(event) => event.preventDefault()}
+              onSubmit={handleSubmit}
               className="user-info"
               id="user-info"
             >
@@ -244,7 +244,7 @@ export default function SignUp() {
               </section>
              
             </form>
-            <button onClick={handleSubmit}>Submit</button>
+            <button type="submit">Submit</button>
           </section>
           
         </div>
