@@ -24,7 +24,7 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 
   const App = () => {
-    const [userID, setUserID] = useState(localStorage.getItem("userID"));
+    const [userID, setUserID] = useState("");
     useEffect(() => {
       localStorage.setItem("userID", userID)
     }, [userID])
