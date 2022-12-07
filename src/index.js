@@ -51,7 +51,7 @@ const root = createRoot(container);
 
             <Route path="recipeItem/:id" element={<RecipeItem />} />
 
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard userID={userID}/>} />
             <Route path="dietarySettings" element={<DietarySettings />} />
             <Route path="accountInfo" element={<AccountInfo />} />
             
