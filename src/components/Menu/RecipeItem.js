@@ -46,11 +46,11 @@ export default function RecipeItem(props) {
   useEffect(() => {
     const fetchData = async() => {
       const data = await recipeCall(Number(id));
-      console.log(data)
+      data.userId = localStorage.getItem("userID");
       setRecipe(data)
     }
     fetchData();
-  }, [])
+  }, [id])
 
 
   return (
@@ -83,7 +83,7 @@ export default function RecipeItem(props) {
     </ol>
     </div>
     
-    <button className="button" onClick={() => textMessage(recipe.ingredients)}>
+    <button className="button" onClick={() => textMessage(recipe)}>
       <b>Text me this shopping list!</b>
     </button> 
     
