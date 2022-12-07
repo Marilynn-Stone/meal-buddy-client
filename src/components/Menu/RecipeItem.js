@@ -1,31 +1,42 @@
-import { recipeCall } from "../../hooks/serverAndDBCalls";
+import { recipeCall, textMessage } from "../../hooks/serverAndDBCalls";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
 export default function RecipeItem(props) {
 
-  // const recipe = {
-  //   id: 346591,
-  //   mealName: "Savory Breakfast Casserole",
-  //   cookTimeInMinutes: 45,
-  //   servings: 3,
-  //   imageURL: "https://spoonacular.com/recipeImages/346591-556x370.jpg",
-  //   summaryDescription:
-  //     'You can never have too many main course recipes, so give Savory Breakfast Casserole a try. This recipe makes 3 servings with <b>670 calories</b>, <b>63g of protein</b>, and <b>22g of fat</b> each. For <b>$4.81 per serving</b>, this recipe <b>covers 39%</b> of your daily requirements of vitamins and minerals. Head to the store and pick up pepper, milk, egg whites, and a few other things to make it today. To use up the egg whites you could follow this main course with the <a href="https://spoonacular.com/recipes/apple-turnovers-recipe-48175">Apple Turnovers Recipe</a> as a dessert. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. 1 person has tried and liked this recipe. It is a good option if you\'re following a <b>vegetarian</b> diet. It will be a hit at your <b>Christmas</b> event. All things considered, we decided this recipe <b>deserves a spoonacular score of 69%</b>. This score is pretty good. Try <a href="https://spoonacular.com/recipes/paleo-savory-breakfast-casserole-509753">Paleo Savory Breakfast Casserole</a>, <a href="https://spoonacular.com/recipes/savory-hash-brown-breakfast-casserole-680841">Savory Hash Brown Breakfast Casserole</a>, and <a href="https://spoonacular.com/recipes/savory-breakfast-casserole-with-eggs-ham-mushrooms-tomatoes-and-chard-530851">Savory Breakfast Casserole with Eggs, Ham, Mushrooms, Tomatoes and Chard</a> for similar recipes.',
-  //   steps: {
-  //     1: "Preheat oven to 35",
-  //     2: "Combine the milk, 1/2 cup cheddar cheese, green onions, and next 5 ingredients (green onions through eggs), stirring with a whisk.",
-  //     3: "Divide sausage and bread evenly between 2 (8 x 4-inch) loaf pans coated with cooking spray.",
-  //     4: "Pour egg mixture evenly between pans. Top each pan with 1/4 cup cheese.",
-  //     5: "Cover each pan with foil.",
-  //     6: "Bake at 350 for 20 minutes. Uncover and bake an additional 40 minutes or until a wooden pick inserted in center comes out clean.",
-  //     7: "To freeze unbaked casserole: Prepare through Step  Cover with plastic wrap, pressing to remove as much air as possible. Wrap with heavy-duty foil. Store in freezer for up to 2 months.",
-  //     8: "To prepare frozen unbaked casserole: Thaw completely in refrigerator (about 24 hours). Preheat oven to 35",
-  //     9: "Remove foil; reserve foil.",
-  //     10: "Remove plastic wrap; discard wrap. Cover casserole with reserved foil; bake at 350 for 40 minutes. Uncover and bake an additional 50 minutes or until bubbly.",
+  // const RECIPE = {
+  //   id: 924856,
+  //   mealName: 'No Effort Vegan Coconut Curry',
+  //   cookTimeInMinutes: '25 minutes',
+  //   servings: 4,
+  //   imageURL: 'https://spoonacular.com/recipeImages/924856-556x370.jpg',
+  //   summaryDescription: `No Effort Vegan Coconut Curry might be just the main course you are searching for. This recipe serves 4 and costs $1.85 per serving. One portion of this dish contains about <b>16g of protein</b>, <b>38g of fat</b>, and a total of <b>705 calories</b>. 1 person found this recipe to be flavorful and satisfying. If you have maple syrup, roasted cashews, carrots, and a few other ingredients on hand, you can make it. To use up the zucchini you could follow this main course with the <a href="https://spoonacular.com/recipes/zucchini-dessert-squares-415963">Zucchini Dessert Squares</a> as a dessert. Only a few people really liked this Indian dish. From preparation to the plate, this recipe takes around <b>25 minutes</b>. It is a good option if you're following a <b>gluten free and vegan</b> diet. It is brought to you by Hurry The Food Up. All things considered, we decided this recipe <b>deserves a spoonacular score of 5%</b>. This score is improvable. Similar recipes include <a href="https://spoonacular.com/recipes/spicy-vegan-thai-coconut-red-curry-with-coconut-saffron-rice-843078">Spicy Vegan Thai Coconut Red Curry with Coconut-Saffron Rice</a>, <a href="https://spoonacular.com/recipes/vegan-chickpea-coconut-curry-31697">Vegan Chickpea Coconut Curry</a>, and <a href="https://spoonacular.com/recipes/vegan-banana-squash-coconut-curry-573628">Vegan Banana Squash Coconut Curry</a>.`,
+  //   ingredients: {
+  //     '1': '1 can coconut milk (1 can = ca. 400ml)',
+  //     '2': '2 carrots',
+  //     '3': '1.5 cups chickpeas, cooked (1.5 cups = 1 tin (ca. 400g wet weight)',
+  //     '4': '2 tsp curry powder',
+  //     '5': '1 cup broccoli or green beans',
+  //     '6': '1 lemon or lime, juiced',
+  //     '7': '2 sticks lemongrass',
+  //     '8': '1 cup basmati or whole grain rice cooked',
+  //     '9': '1 tbsp maple syrup',
+  //     '10': '1 tbsp oil',
+  //     '11': '½ cup roasted cashews or peanuts',
+  //     '12': '½ tsp salt',
+  //     '13': '1 spring onion',
+  //     '14': '1 sweet potato',
+  //     '15': '1 tbsp yellow curry paste (or red for hotter, green for hottest!)',
+  //     '16': '½ zucchini'
   //   },
-  // };
+  //   steps: {
+  //     '1': 'If serving with rice, get that cooking now according to package instructions.Grate the sweet potato and the carrots.Chop the spring onion, broccoli, and zucchini.',
+  //     '2': 'Add the oil to a large pan and fry all the veg on a medium heat. This needs about 5-7 minutes.Next, add the curry powder and curry paste, and the beaten (smack it with a heavy spoon a few times to let out the flavour) lemongrass.Stir and fry for another couple of minutes then add the coconut milk and the chickpeas.',
+  //     '3': 'Let it simmer for another 5 minutes.',
+  //     '4': 'Serve with rice and top with the cashews or peanuts. Easy. Awesome.'
+  //   }
+  // }
 
   const {id} = useParams();
   
@@ -72,9 +83,9 @@ export default function RecipeItem(props) {
     </ol>
     </div>
     
-    
-    
- 
+    <button className="button" onClick={() => textMessage(recipe.ingredients)}>
+      <b>Text me this shopping list!</b>
+    </button> 
     
   </div> 
   );

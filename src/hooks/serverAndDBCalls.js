@@ -45,4 +45,12 @@ const recipeCall = function (meal_id) {
     });
 };
 
-export { loginCall, weeklyMenuCall, replaceWeeklyMenuCall, recipeCall };
+const textMessage = function(ingredients) {
+  return axios
+    .post("http://localhost:8080/menu/textMessage", ingredients )
+    .then((response) => {
+      return response.data;
+    });
+}
+
+export { loginCall, weeklyMenuCall, replaceWeeklyMenuCall, recipeCall, textMessage };
