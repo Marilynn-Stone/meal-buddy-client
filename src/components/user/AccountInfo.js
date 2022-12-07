@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function AccountInfo() {
+export default function AccountInfo({userID}) {
+
   //USER PERSONAL INFO STATES---------------------------------
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -24,13 +25,12 @@ export default function AccountInfo() {
   const [soy, setSoy] = useState(false);
   const [sesame, setSesame] = useState(false);
   //----------------------------------------------------------
-  const [user, setUser] = useState({});
+
   // WILL BE MOVED TO HOOKS SERVER AND DB CALLS
-  const accountInfoCall = () => {
-    const userID = localStorage.getItem("userID");
+  const accountInfoCall = (userID) => {
     return axios
       .post(
-        "/users/accountInfo",
+        "http://localhost:8080/users/accountInfo",
         {
           firstName,
           lastName,
@@ -52,16 +52,15 @@ export default function AccountInfo() {
         { headers: { userID: userID } }
       )
       .then((response) => {
-        console.log(response);
+        console.log("account info call:", response);
       });
   };
 
-  const accountInfoGet = () => {
-    const userID = localStorage.getItem("userID");
+  const accountInfoGet = (userID) => {
     return axios
-      .get(`/users/accountInfo`, { headers: { userID: userID } })
+      .get(`http://localhost:8080/users/accountInfo`, { headers: { userID: userID } })
       .then((result) => {
-        console.log("account info", result);
+        console.log("account info get:", result);
         setFirstName(result.data.first_name);
         setLastName(result.data.last_name);
         setEmail(result.data.email);
@@ -87,13 +86,13 @@ export default function AccountInfo() {
   };
 
   const handleSubmit = (e) => {
-    goMenu();
     e.preventDefault();
-    accountInfoCall();
+    accountInfoCall(userID);
+    goMenu();
   };
 
   useEffect(() => {
-    accountInfoGet();
+    accountInfoGet(userID);
   }, []);
 
   return (
@@ -109,7 +108,6 @@ export default function AccountInfo() {
               id="user-info"
             >
               <label className="signup-label">First Name </label>
-
               <input
                 value={firstName}
                 type="text"
@@ -265,6 +263,7 @@ export default function AccountInfo() {
                 </section>
                 {/* <label className="signup-label">Other </label>
                 <input type="text" name="restriction"></input> */}
+
               </section>
             </form>
             <button onClick={handleSubmit}>Submit</button>
