@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { weeklyMenuCall } from "../../hooks/serverAndDBCalls";
 import TableMenuItem from "./TableMenuItem";
 
-export default function TableMenu(props) {
+export default function TableMenu({userID}) {
 
   const [weeklyMenu, setWeeklyMenu] = useState([])
+  const [menuRequest, setMenuRequest] = useState(1)
   
   useEffect(() => {
     const fetchData = async() => {
@@ -145,8 +146,9 @@ export default function TableMenu(props) {
         {/* <div className="menu-items-container">
     <ul>{menuItems}</ul>
     </div> */}
-  
   </div>
+  
+  <button onClick={() => setMenuRequest = menuRequest + 1}>I hate these meals! Try again, Meal Buddy!</button>
 
   </>
 

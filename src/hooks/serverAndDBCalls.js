@@ -11,6 +11,9 @@ const loginCall = (email, password, setUserID) => {
 };
 
 const weeklyMenuCall = function(user_id) {
+  if (weeklyMenu.length != 0) {
+    
+  } else {
   return axios.post("http://localhost:8080/menu/weekly_menu", { user_id })
   .then((response) => {
     console.log(response.data);
@@ -19,6 +22,7 @@ const weeklyMenuCall = function(user_id) {
   .catch((err) => {
     console.log(err);
   })
+}
 }
 
 const recipeCall = function(meal_id) {
