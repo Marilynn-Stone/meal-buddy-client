@@ -51,6 +51,8 @@ export default function RecipeItem(props) {
       <h1>{recipe.mealName}</h1>
       <h4>Servings: {recipe.servings} </h4>
       <h4>Cook Time: {recipe.cookTimeInMinutes} </h4>
+      <br />
+      <h4>Text me this grocery list: <button>Text me!</button></h4>
       </div>
     </div>
       
