@@ -11,7 +11,6 @@ export default function TableMenu() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await weeklyMenuCall(Number(localStorage.getItem("userID")));
-      console.log(data);
       setWeeklyMenu(data);
     };
     fetchData();
