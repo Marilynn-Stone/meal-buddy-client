@@ -22,7 +22,7 @@
 // $medium-teal: #619B8A;
 
 #root {
-  background-color: $yellow;
+  background-color: $dark-teal;
   box-sizing: border-box;
 
 }
@@ -43,8 +43,9 @@
     align-items: flex-start;
     justify-content: space-evenly;
     img{
-      width: 90px;
-      margin-left: 3em;
+      width: 120px;
+      padding: 1em;
+      margin-left: 1.5em;
     }
   }
   .header-center{
@@ -87,7 +88,6 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1em;
-    margin-right: 1.5em;
 
 
     button, a {
@@ -133,10 +133,12 @@
   }
   
 }
-
+#whole-header {
+  height: 150px;
+}
 .mainpage {
   display: flex;
-  margin-top: 100px;
+  margin-top: 200px;
   height: 100%;
   background-image: url(https://iili.io/HCkpGtI.png);
   width: 100vw;

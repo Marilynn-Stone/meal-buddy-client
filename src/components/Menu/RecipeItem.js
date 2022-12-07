@@ -58,7 +58,6 @@ export default function RecipeItem(props) {
    
     <div className="steps">
     <h1 className="instructions">Ingredients:</h1>
-
     <ol>
       {Object.values(recipe.ingredients).map((ingredient) => {
         return <li key={ingredient}>    ~  {ingredient}.<br /></li>;
@@ -71,14 +70,6 @@ export default function RecipeItem(props) {
         return <li key={step}>    ~  {step}.<br /></li>;
       })}
     </ol>
-    </div>
-    <br /><br /><br />
-    <div className="shopping-list">
-      {Object.values(recipe.shoppingList).map((shoppingList) => {
-        return <li key={shoppingList}>{shoppingList}.<br /></li>;
-        })}
-        <br />
-        <a href="/" > Text me this grocery list </a>
     </div>
     
     
