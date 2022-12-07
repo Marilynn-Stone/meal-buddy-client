@@ -9,6 +9,7 @@
 @import "../../styles/typography.scss";
 @import "../../styles/mixins/mixins.scss";
 @import "../../styles/animations/_usb-animation-pulse.scss";
+@import "../../styles/animations/_usb-animation-float.scss";
 
 
 //custom mouse https://iili.io/HCkbTHQ.png
@@ -32,7 +33,7 @@
   width: 100vw;
   position: fixed;
   color: $orange;
-  height: 200px;
+  // height: 200px;
  
   .header-left{
     display: flex;
@@ -43,8 +44,8 @@
     justify-content: space-evenly;
     img{
       width: 120px;
-      padding: 2em;
-      margin-left: 3em;
+      padding: 1em;
+      margin-left: 1.5em;
     }
   }
   .header-center{
@@ -64,7 +65,6 @@
       span {
         font-size: 72px;
         text-shadow: $yellow 4px 2px 0;
-
       }
     }
     
@@ -79,8 +79,7 @@
     }
   }
   .bounce {
-    animation-name: bounce;
-    animation-timing-function: ease;
+    @extend %usb-animation-float; 
   }
 
   .header-right{
@@ -132,8 +131,11 @@
       @extend %usb-animation-pulse;
     }
   }
+  
 }
-
+#whole-header {
+  height: 150px;
+}
 .mainpage {
   display: flex;
   margin-top: 200px;
