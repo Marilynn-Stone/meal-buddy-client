@@ -11,7 +11,6 @@ export default function TableMenu() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await weeklyMenuCall(Number(localStorage.getItem("userID")));
-      console.log(data);
       setWeeklyMenu(data);
     };
     fetchData();
@@ -32,7 +31,7 @@ export default function TableMenu() {
   ));
 
   return (
-    <>
+    <div className="refresh-menu-button">
       <div className="weekly-menu-container">
         <table>
           <tr>
@@ -126,6 +125,7 @@ export default function TableMenu() {
       </div>
 
       <button
+        
         onClick={async () =>
           setWeeklyMenu(
             await replaceWeeklyMenuCall(Number(localStorage.getItem("userID")))
@@ -134,6 +134,6 @@ export default function TableMenu() {
       ><b>
         I hate these meals! Try again, Meal Buddy!</b>
       </button>
-    </>
+    </div>
   );
 }

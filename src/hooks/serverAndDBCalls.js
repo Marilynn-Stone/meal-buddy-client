@@ -19,7 +19,6 @@ const weeklyMenuCall = function (user_id) {
   return axios
     .post("http://localhost:8080/menu/weekly_menu", { user_id })
     .then((response) => {
-      console.log(response.data);
       return response.data;
     })
     .catch((err) => {
@@ -31,7 +30,6 @@ const replaceWeeklyMenuCall = function (user_id) {
   return axios
     .post("http://localhost:8080/menu/replace_weekly_menu", { user_id })
     .then((response) => {
-      console.log(response.data);
       return response.data;
     });
 };
@@ -40,7 +38,6 @@ const recipeCall = function (meal_id) {
   return axios
     .get(`/menu/meal/${meal_id}`)
     .then((response) => {
-      console.log(response.data);
       return response.data;
     })
     .catch((err) => {
@@ -48,4 +45,12 @@ const recipeCall = function (meal_id) {
     });
 };
 
-export { loginCall, weeklyMenuCall, replaceWeeklyMenuCall, recipeCall };
+const textMessage = function(ingredients) {
+  return axios
+    .post("http://localhost:8080/menu/textMessage", ingredients )
+    .then((response) => {
+      return response.data;
+    });
+}
+
+export { loginCall, weeklyMenuCall, replaceWeeklyMenuCall, recipeCall, textMessage };
