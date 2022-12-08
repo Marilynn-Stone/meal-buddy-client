@@ -244,7 +244,7 @@ export default function SignUp({setUserID}) {
               </section>
              
             </form>
-            <button type="submit">Submit</button>
+            <button onClick={handleSubmit}>Submit</button>
           </section>
           
         </div>
