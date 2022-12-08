@@ -123,17 +123,16 @@ export default function TableMenu() {
     <ul>{menuItems}</ul>
     </div> */}
       </div>
-
       <button
-        
         onClick={async () =>
           setWeeklyMenu(
             await replaceWeeklyMenuCall(Number(localStorage.getItem("userID")))
           )
         }
-      ><b>
-        I hate these meals! Try again, Meal Buddy!</b>
+      >
+        I hate these meals! Try again, Meal Buddy!
       </button>
+      
     </div>
   );
 }

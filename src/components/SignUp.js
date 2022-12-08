@@ -56,14 +56,17 @@ export default function SignUp({setUserID}) {
   };
 
   const navigate = useNavigate();
-  const goHome = () => {
-    navigate("../WelcomeTo");
+  // const goHome = () => {
+  //   navigate("../WelcomeTo");
+  // };
+  const goToSignIn = () => {
+    navigate("../login");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     signupCall(setUserID);
-    goHome();
+    goToSignIn();
   };
 
   return (
