@@ -12,7 +12,8 @@
 @import "../../styles/animations/_usb-animation-float.scss";
 
 
-//custom mouse https://iili.io/HCkbTHQ.png
+//custom mouse https://iili.io/Hn36Sat.png carrot
+//custom mouse https://iili.io/Hn366wG.png cake
 
 // VARIABLES:
 // $dark-teal: #233D4D;
@@ -22,6 +23,7 @@
 // $medium-teal: #619B8A;
 
 #root {
+  cursor: url(https://iili.io/Hn36Sat.png), auto;
   background-color: $dark-teal;
   box-sizing: border-box;
 
@@ -44,8 +46,8 @@
     justify-content: space-evenly;
     img{
       width: 120px;
-      padding: 1em;
-      margin-left: 1.5em;
+      padding: 2.5em;
+      margin-left: 2em;
     }
   }
   .header-center{
@@ -88,6 +90,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 1em;
+    margin-right: 2em;
 
 
     button, a {
@@ -102,8 +105,9 @@
         color: $medium-teal;
       }
       &:hover {
+        cursor: url(https://iili.io/Hn366wG.png), auto;
         color: $green;
-        cursor: grab;  
+        
       }
       &:active {
         color: $orange;
@@ -119,6 +123,7 @@
       
       margin-right: 1em;
       &:hover {
+        cursor: url(https://iili.io/Hn366wG.png), auto;
         background-color: $medium-teal;
         color: $dark-teal;
        
@@ -126,9 +131,11 @@
     }
     .sign-in-button {
       @extend %usb-animation-pulse;
+      cursor: url(https://iili.io/Hn366wG.png), auto;
     }
     .sign-up-button {
       @extend %usb-animation-pulse;
+      cursor: url(https://iili.io/Hn366wG.png), auto;
     }
   }
   
@@ -183,11 +190,13 @@
       margin: 1.5em;
       box-shadow: 10px 10px 1px 0px $dark-teal ;
       &:hover {
+        cursor: url(https://iili.io/Hn366wG.png), auto;
         background-color: $dark-teal;
         color: $yellow;
         transform: scale(1.1);
         border-radius: 40%;
         box-shadow: 10px 10px 0px 0px $yellow;
+        
       }
     }
   }
@@ -204,6 +213,7 @@
       }
       &:hover {
         color: $yellow;
+        cursor: url(https://iili.io/Hn366wG.png), auto;
       }    
   }
 }
@@ -396,6 +406,7 @@
     &:hover {
       background-color: $dark-teal;
       color: $green;
+      cursor: url(https://iili.io/Hn366wG.png), auto;
      
     }
     &:active {
@@ -495,6 +506,7 @@
       &:hover {
         background-color: $dark-teal;
         color: $green;
+        cursor: url(https://iili.io/Hn366wG.png), auto;
       }
       &:active {
         color: $yellow;
@@ -565,9 +577,9 @@
   background-color: $green;
   border-radius: 15%;
   box-shadow: $dark-teal 15px 15px 0px 0px;  
-  font-size: 40px;
+  font-size: 18px;
   color: $dark-teal;
-  width: 80%;
+  width: 500px;
   padding: 1em;
   
 
@@ -641,6 +653,7 @@
       font-weight: 600;
       margin-right: 1em;
       &:hover {
+        cursor: url(https://iili.io/Hn366wG.png), auto;
         background-color: $dark-teal;
         color: $green;
        
@@ -685,6 +698,25 @@
       border-radius: 15px;
       border: 2px solid $dark-teal;
       padding-top: 4em;
+
+      button {
+      @extend %usb-animation-pulse;
+      background-color: $green;
+      border: 2px solid $dark-teal;
+      color: $dark-teal;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 5px;
+      margin: 1em;
+      &:hover {
+        cursor: url(https://iili.io/Hn366wG.png), auto;
+        background-color: $dark-teal;
+        color: $green;
+       
+      }
+        
+      }
     }
   }
   section {
@@ -703,7 +735,20 @@
   
   }
   .steps {
-    font-size: 16px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 1em;
+    .ingredients-container {
+    flex-direction: column;
+    }
+    .instructions-container {
+      flex-direction: column;
+      max-width: 600px;
+    }
+    
   }
   p {
     font-size: 18px;
@@ -769,6 +814,7 @@
     font-size: 18px;
     font-weight: 900;
     &:hover {
+      cursor: url(https://iili.io/Hn366wG.png), auto;
       color: $dark-teal;
       
     }
@@ -795,12 +841,20 @@
       font-size: 20px;;
       margin-right: 1em;
       &:hover {
+        cursor: url(https://iili.io/Hn366wG.png), auto;
         background-color: $medium-teal;
         color: $dark-teal;
        
       }
 }
 
+a, button, Link {
+  cursor: url(https://iili.io/Hn366wG.png), auto;;
+}
+
+.home-button {
+  cursor: url(https://iili.io/Hn366wG.png), auto;
+}
  //custom mouse https://iili.io/HCkbTHQ.png
 
 // VARIABLES:

@@ -63,20 +63,26 @@ export default function RecipeItem(props) {
       <h4>Servings: {recipe.servings} </h4>
       <h4>Cook Time: {recipe.cookTimeInMinutes} </h4>
       <br />
-      <h4>Text me this grocery list: <button>Text me!</button></h4>
+      <h4>Text me this shopping list:     <button className="button" onClick={() => textMessage(recipe)}>
+      Text Me!
+    </button> </h4>
       </div>
     </div>
       
 
    
     <div className="steps">
+      <div  className="ingredients-container">
     <h1 className="instructions">Ingredients:</h1>
     <ol>
       {Object.values(recipe.ingredients).map((ingredient) => {
         return <li key={ingredient}>    ~  {ingredient}.<br /></li>;
       })}
     </ol>
+    </div>
+
     <br />
+    <div className="instructions-container">
     <h1 className="instructions">Instructions:</h1>
     <ol>
       {Object.values(recipe.steps).map((step) => {
@@ -84,11 +90,7 @@ export default function RecipeItem(props) {
       })}
     </ol>
     </div>
-    
-    <button className="button" onClick={() => textMessage(recipe)}>
-      <b>Text me this shopping list!</b>
-    </button> 
-    
+    </div>
   </div> 
   );
 }

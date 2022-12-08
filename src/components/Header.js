@@ -56,7 +56,7 @@ export default function Header({userID, setUserID}) {
         <div className="header-right">
           {headerContainer}
           <h3>
-            <Link to={"/"} className="top-button"><AiFillHome /></Link>
+            <Link to={"/"} className="top-button home-button"><AiFillHome /></Link>
           </h3>
         </div>
       </div>
